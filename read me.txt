@@ -1,5 +1,6 @@
 okay! here we are
 this is the main text file i will document what i am going to do.
+you can read the details  in the powerpoint files located in each stage
 
 
 project name:
