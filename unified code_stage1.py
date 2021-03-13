@@ -1,6 +1,20 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # for the dear user
+
+# In[319]:
+
+
+# please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
+# for example  --->   r'C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv'
+input_path = '???'
+
+
+# and again please give me the output path to save the final result
+output_path = '?????'
+
+
 # # importing all the packages we need
 
 # In[293]:
@@ -24,11 +38,11 @@ import re
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
 
-# In[294]:
+# In[317]:
 
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
-bacDive = pd.read_csv(r"C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv")
+bacDive = pd.read_csv(path)
 
 
 # In[296]:
@@ -239,5 +253,5 @@ my_data_frame = my_data_frame.set_index([s])
 ###########################################
 result = pd.concat([new_bac, my_data_frame], axis=1)
 ###########################################
-result.to_csv(r'C:\Users\kamy\Desktop\final_output_of_stage1.csv')
+result.to_csv(output_path)
 
