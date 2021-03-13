@@ -3,7 +3,7 @@
 
 # # importing all the packages we need
 
-# In[7]:
+# In[293]:
 
 
 import pandas as pd
@@ -20,20 +20,20 @@ import re
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
 
-# In[195]:
+# In[294]:
 
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
 bacDive = pd.read_csv(r"C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv")
 
 
-# In[196]:
+# In[295]:
 
 
 bacDive
 
 
-# In[197]:
+# In[296]:
 
 
 # filling the table # replacing NaN with no in three colums (Category 1, Category 2, Category 3)
@@ -42,13 +42,13 @@ bacDive["Category 2"].fillna("#no", inplace = True)
 bacDive["Category 1"].fillna("#no", inplace = True) 
 
 
-# In[198]:
+# In[297]:
 
 
 bacDive
 
 
-# In[199]:
+# In[298]:
 
 
 # the reason i used this code is to fill empty cells
@@ -70,7 +70,7 @@ for counter in range(0,x):
         #bacDive.iloc[counter+1,8] = bacDive.iloc[counter,8] +  bacDive.iloc[counter+1,8]
 
 
-# In[200]:
+# In[299]:
 
 
 ######## we wont need this if we are going to maintain other Tags in future
@@ -87,7 +87,7 @@ for counter in range(0,x):
     #bacDive = bacDive.drop([i])
 
 
-# In[202]:
+# In[300]:
 
 
 # now we have a dataframe whithout any tags other than #Environmental  but there are still some redundency, there are some rows with the same Species name
@@ -104,7 +104,7 @@ for counter in range(0,x):
         
 
 
-# In[203]:
+# In[301]:
 
 
 # and now we remove the duplicate row
@@ -112,35 +112,17 @@ for i in temporary_list:
     bacDive = bacDive.drop([i])
 
 
-# In[204]:
+# In[311]:
 
 
-bacDive
-
-
-# In[205]:
-
-
-bacDive.to_csv(r'C:\Users\kamy\Desktop\stage1_step2_export_bacdive_iso_table cleaned.csv')
+bacDive = bacDive[0:10]
 
 
 # # STEP THREE
 
 # WEB SCRAPING from BacDive
 
-# In[102]:
-
-
-bacDive = pd.read_csv(r"C:\Users\kamy\Desktop\stage1_step2_export_bacdive_iso_table cleaned.csv")
-
-
-# In[103]:
-
-
-bacDive
-
-
-# In[104]:
+# In[303]:
 
 
 # we want to creat URLs using the BacDive IDs
@@ -153,7 +135,7 @@ all_IDs = all_IDs[0:10]
 
 # producing links for web scrapping
 
-# In[105]:
+# In[304]:
 
 
 def get_ID_give_URL(ID):
@@ -161,7 +143,7 @@ def get_ID_give_URL(ID):
     return url
 
 
-# In[106]:
+# In[305]:
 
 
 def read_html(url):
@@ -173,14 +155,14 @@ def read_html(url):
 #CODE = 200 means the url is availible
 
 
-# In[107]:
+# In[306]:
 
 
 # in future i should improve this regex # its a regex to find temperature Data
 my_regex = re.compile("(Ref\.\:.\#\d+)\]\<\/a\>\<\/td\>\s\<td\>\<\/td\>\s\<td.class\=\"border\_rightfree\ textalign\_right\"\>\<\/td\>\s\<td.class\=\"border\_leftfree\"\>(\w+)\<\/td\>\s\<td.class\=\"border_leftfree textalign_center\"\>(\d{2}\-\d{2}|\d{2}\.\d{1}|\d{2})")
 
 
-# In[108]:
+# In[307]:
 
 
 my_data_frame = pd.DataFrame()
@@ -195,7 +177,7 @@ for ID in all_IDs:
         print("Something went wrong!!!  the following url seems to be wrong   ; " , url)
     
     soup = BeautifulSoup(html_doc, "lxml")
-    list_of_extracted_data = []
+    list_of_extracted_data = [ID]
     
     
     #first step ==> extracting phylogeny data
@@ -210,7 +192,7 @@ for ID in all_IDs:
     soup = str(soup)
     temperature_data = my_regex.findall(soup)
     list_of_extracted_data = list_of_extracted_data +temperature_data
-    while len(list_of_extracted_data) != 20:
+    while len(list_of_extracted_data) != 16:
         list_of_extracted_data.append("")
     my_data_frame[ID] = pd.Series(list_of_extracted_data)
     
@@ -220,21 +202,53 @@ for ID in all_IDs:
 # transpose the dataframe
 my_data_frame = my_data_frame.T
 # naming columns
-my_data_frame = my_data_frame.rename(columns={0: 'Last LPSN update', 1: 'Domain', 2: 'Phylum', 3: 'Class', 4: 'Order', 5: 'Family', 6: 'Genus', 7: 'Species', 8: 'temperature Ref 1', 9: 'temperature Ref 2', 10: 'temperature Ref 3', 11: 'temperature Ref 4', 12: 'temperature Ref 5', 13: 'temperature Ref 6', 14: 'temperature Ref 7'})
+my_data_frame = my_data_frame.rename(columns={0: 'ID',  1: 'Last LPSN update', 2: 'Domain', 3: 'Phylum', 4: 'Class', 5: 'Order', 6: 'Family', 7: 'Genus', 8: 'Species', 9: 'Full Scientific Name (PNU)', 10: 'temperature Ref 1', 11: 'temperature Ref 2', 12: 'temperature Ref 3', 13: 'temperature Ref 4', 14: 'temperature Ref 5', 15: 'temperature Ref 6', 16: 'temperature Ref 7'})
 
 
-# saving the data
+# # STEP FOUR
 
-# In[54]:
+# another cleaning and filling step
 
-
-my_data_frame.to_csv(r'C:\Users\kamy\Desktop\webscrapping_output.csv')
-
-
-# or you can put data together
-
-# In[111]:
+# In[308]:
 
 
-# i will do it later in my free time
+# fill the cells and replacing "NaN" with "#no"
+# this will clean the dataframe for future use
+my_data_frame["temperature Ref 1"].fillna("#no", inplace = True)
+my_data_frame["temperature Ref 2"].fillna("#no", inplace = True)
+my_data_frame["temperature Ref 3"].fillna("#no", inplace = True)
+my_data_frame["temperature Ref 4"].fillna("#no", inplace = True)
+my_data_frame["temperature Ref 5"].fillna("#no", inplace = True)
+my_data_frame["temperature Ref 6"].fillna("#no", inplace = True)
+
+
+# In[309]:
+
+
+#### in order to know the species with no temperature data  ####
+list_index_no_temp = []
+list_no_temp_species_ID = []
+
+for counter in range (0,len(my_data_frame)):
+    if (my_data_frame.iloc[counter,10] == "#no"):
+        list_index_no_temp.append(counter)
+        list_no_temp_species_ID.append(my_data_frame.iloc[counter,0])
+        
+# give me an overview please
+print('until now, there are', str(len(list_no_temp_species_ID)) , 'species with no temperature data and you can see the list of IDs with no temp data in this: list_no_temp_species_ID')
+
+
+# In[312]:
+
+
+# making to dataframes look the same , so we can use concat()
+s = pd.Series(range(len(bacDive)))
+new_bac = new_bac.set_index([s])
+###########################################
+s = pd.Series(range(len(my_data_frame)))
+my_data_frame = my_data_frame.set_index([s])
+###########################################
+result = pd.concat([new_bac, my_data_frame], axis=1)
+###########################################
+result.to_csv(r'C:\Users\kamy\Desktop\final_output_of_stage1.csv')
 
