@@ -3,21 +3,21 @@
 
 # # for the dear user
 
-# In[319]:
+# In[37]:
 
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
 # for example  --->   r'C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv'
-input_path = '???'
+input_path = r'C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv'
 
 
 # and again please give me the output path to save the final result
-output_path = '?????'
+output_path = r'C:\Users\kamy\Desktop\OUTPUT.csv'
 
 
 # # importing all the packages we need
 
-# In[293]:
+# In[38]:
 
 
 import pandas as pd
@@ -38,14 +38,14 @@ import re
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
 
-# In[317]:
+# In[39]:
 
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
-bacDive = pd.read_csv(path)
+bacDive = pd.read_csv(input_path)
 
 
-# In[296]:
+# In[40]:
 
 
 # filling the table # replacing NaN with no in three colums (Category 1, Category 2, Category 3)
@@ -54,7 +54,7 @@ bacDive["Category 2"].fillna("#no", inplace = True)
 bacDive["Category 1"].fillna("#no", inplace = True) 
 
 
-# In[298]:
+# In[41]:
 
 
 # the reason i used this code is to fill empty cells
@@ -76,7 +76,7 @@ for counter in range(0,x):
         #bacDive.iloc[counter+1,8] = bacDive.iloc[counter,8] +  bacDive.iloc[counter+1,8]
 
 
-# In[299]:
+# In[42]:
 
 
 ######## we wont need this if we are going to maintain other Tags in future
@@ -93,7 +93,7 @@ for counter in range(0,x):
     #bacDive = bacDive.drop([i])
 
 
-# In[300]:
+# In[43]:
 
 
 # now we have a dataframe whithout any tags other than #Environmental  but there are still some redundency, there are some rows with the same Species name
@@ -110,7 +110,7 @@ for counter in range(0,x):
         
 
 
-# In[301]:
+# In[44]:
 
 
 # and now we remove the duplicate row
@@ -122,7 +122,7 @@ for i in temporary_list:
 
 # WEB SCRAPING from BacDive
 
-# In[313]:
+# In[45]:
 
 
 # we want to creat URLs using the BacDive IDs
@@ -131,7 +131,7 @@ all_IDs = bacDive['ID']
 
 # producing links for web scrapping
 
-# In[304]:
+# In[46]:
 
 
 def get_ID_give_URL(ID):
@@ -141,7 +141,7 @@ def get_ID_give_URL(ID):
 
 # reading html
 
-# In[305]:
+# In[47]:
 
 
 def read_html(url):
@@ -153,15 +153,20 @@ def read_html(url):
 #CODE = 200 means the url is availible
 
 
-# In[306]:
+# In[59]:
 
 
 # my regex to extract temperature data from BacDive
-# in future i should improve this regex # its a regex to find temperature Data
-my_regex = re.compile("(Ref\.\:.\#\d+)\]\<\/a\>\<\/td\>\s\<td\>\<\/td\>\s\<td.class\=\"border\_rightfree\ textalign\_right\"\>\<\/td\>\s\<td.class\=\"border\_leftfree\"\>(\w+)\<\/td\>\s\<td.class\=\"border_leftfree textalign_center\"\>(\d{2}\-\d{2}|\d{2}\.\d{1}|\d{2})")
+# in future i should improve this regex 
+my_regex_temperature = re.compile("(Ref\.\:.\#\d+)\]\<\/a\>\<\/td\>\s\<td\>\<\/td\>\s\<td.class\=\"border\_rightfree\ textalign\_right\"\>\<\/td\>\s\<td.class\=\"border\_leftfree\"\>(\w+)\<\/td\>\s\<td.class\=\"border_leftfree textalign_center\"\>(\d{2}\-\d{2}|\d{2}\.\d{1}|\d{2})")
+
+# my regex to extract pH data from BacDive
+# in future i should improve this regex 
+x=str('(Ref\.\:.\#\d+)\]\<\/a\>\<\/td\>\\n\<td\>\<\/td\>\\n\<td\sclass=\"border\_rightfree\stextalign\_right\"\>\<\/td\>\\n\<td\sclass=\"border\_leftfree\"\>(\w+)\<\/td\>\\n\<td\sclass=\"valigntop\sborder\stextalign\_center\"\>(\d+\.\d+\-\d\.\d+)')
+my_regex_pH = re.compile(x)
 
 
-# In[307]:
+# In[49]:
 
 
 my_data_frame = pd.DataFrame()
@@ -189,9 +194,19 @@ for ID in all_IDs:
         
     #second step ==> extracting temp data
     soup = str(soup)
-    temperature_data = my_regex.findall(soup)
+    temperature_data = my_regex_temperature.findall(soup)
     list_of_extracted_data = list_of_extracted_data +temperature_data
     while len(list_of_extracted_data) != 16:
+        list_of_extracted_data.append("")
+    
+    
+    
+    #third step ==> extracting phylogeny data
+    
+    soup = str(soup)
+    pH_data = my_regex_pH.findall(soup)
+    list_of_extracted_data = list_of_extracted_data + pH_data
+    while len(list_of_extracted_data) != 22:
         list_of_extracted_data.append("")
     my_data_frame[ID] = pd.Series(list_of_extracted_data)
     
@@ -201,14 +216,14 @@ for ID in all_IDs:
 # transpose the dataframe
 my_data_frame = my_data_frame.T
 # naming columns
-my_data_frame = my_data_frame.rename(columns={0: 'ID',  1: 'Last LPSN update', 2: 'Domain', 3: 'Phylum', 4: 'Class', 5: 'Order', 6: 'Family', 7: 'Genus', 8: 'Species', 9: 'Full Scientific Name (PNU)', 10: 'temperature Ref 1', 11: 'temperature Ref 2', 12: 'temperature Ref 3', 13: 'temperature Ref 4', 14: 'temperature Ref 5', 15: 'temperature Ref 6', 16: 'temperature Ref 7'})
+my_data_frame = my_data_frame.rename(columns={0: 'ID',  1: 'Last LPSN update', 2: 'Domain', 3: 'Phylum', 4: 'Class', 5: 'Order', 6: 'Family', 7: 'Genus', 8: 'Species', 9: 'temperature Ref 1', 10: 'temperature Ref 2', 11: 'temperature Ref 3', 12: 'temperature Ref 4', 13: 'temperature Ref 5', 14: 'temperature Ref 6', 15: 'temperature Ref 7', 16: 'pH 1', 17: 'pH 2', 18: 'pH 3', 19: 'pH 4', 20: 'pH 5', 21: 'pH 6'})
 
 
 # # STEP FOUR
 
 # another cleaning and filling step
 
-# In[308]:
+# In[57]:
 
 
 # fill the cells and replacing "NaN" with "#no"
@@ -219,9 +234,16 @@ my_data_frame["temperature Ref 3"].fillna("#no", inplace = True)
 my_data_frame["temperature Ref 4"].fillna("#no", inplace = True)
 my_data_frame["temperature Ref 5"].fillna("#no", inplace = True)
 my_data_frame["temperature Ref 6"].fillna("#no", inplace = True)
+my_data_frame["temperature Ref 7"].fillna("#no", inplace = True)
+my_data_frame["pH 1"].fillna("#no", inplace = True)
+my_data_frame["pH 2"].fillna("#no", inplace = True)
+my_data_frame["pH 3"].fillna("#no", inplace = True)
+my_data_frame["pH 4"].fillna("#no", inplace = True)
+my_data_frame["pH 5"].fillna("#no", inplace = True)
+my_data_frame["pH 6"].fillna("#no", inplace = True)
 
 
-# In[309]:
+# In[51]:
 
 
 #### in order to know the species with no temperature data  ####
@@ -241,17 +263,57 @@ print('until now, there are', str(len(list_no_temp_species_ID)) , 'species with 
 
 # concat all the previous dataframes and producing an output
 
-# In[312]:
+# In[52]:
 
 
 # making to dataframes look the same , so we can use concat()
 s = pd.Series(range(len(bacDive)))
-new_bac = new_bac.set_index([s])
+bacDive = bacDive.set_index([s])
 ###########################################
 s = pd.Series(range(len(my_data_frame)))
 my_data_frame = my_data_frame.set_index([s])
 ###########################################
-result = pd.concat([new_bac, my_data_frame], axis=1)
+result = pd.concat([bacDive, my_data_frame], axis=1)
 ###########################################
 result.to_csv(output_path)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# # STAGE 2
+
+# # STAGE 2
+
+# # STAGE 2
+
+# # STAGE 2
+
+# # STAGE 2
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
