@@ -1,0 +1,907 @@
+,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436
+0,https://bacdive.dsmz.de/strain/132012,https://bacdive.dsmz.de/strain/132013,https://bacdive.dsmz.de/strain/23351,https://bacdive.dsmz.de/strain/23353,https://bacdive.dsmz.de/strain/23354,https://bacdive.dsmz.de/strain/23352,https://bacdive.dsmz.de/strain/130973,https://bacdive.dsmz.de/strain/23355,https://bacdive.dsmz.de/strain/23356,https://bacdive.dsmz.de/strain/23357,https://bacdive.dsmz.de/strain/23358,https://bacdive.dsmz.de/strain/7835,https://bacdive.dsmz.de/strain/17728,https://bacdive.dsmz.de/strain/130217,https://bacdive.dsmz.de/strain/13538,https://bacdive.dsmz.de/strain/13539,https://bacdive.dsmz.de/strain/23845,https://bacdive.dsmz.de/strain/24824,https://bacdive.dsmz.de/strain/158339,https://bacdive.dsmz.de/strain/140170,https://bacdive.dsmz.de/strain/10441,https://bacdive.dsmz.de/strain/23433,https://bacdive.dsmz.de/strain/18162,https://bacdive.dsmz.de/strain/21708,https://bacdive.dsmz.de/strain/155665,https://bacdive.dsmz.de/strain/577,https://bacdive.dsmz.de/strain/578,https://bacdive.dsmz.de/strain/579,https://bacdive.dsmz.de/strain/580,https://bacdive.dsmz.de/strain/581,https://bacdive.dsmz.de/strain/582,https://bacdive.dsmz.de/strain/583,https://bacdive.dsmz.de/strain/585,https://bacdive.dsmz.de/strain/586,https://bacdive.dsmz.de/strain/587,https://bacdive.dsmz.de/strain/588,https://bacdive.dsmz.de/strain/589,https://bacdive.dsmz.de/strain/23587,https://bacdive.dsmz.de/strain/23588,https://bacdive.dsmz.de/strain/23589,https://bacdive.dsmz.de/strain/23590,https://bacdive.dsmz.de/strain/23591,https://bacdive.dsmz.de/strain/23592,https://bacdive.dsmz.de/strain/23593,https://bacdive.dsmz.de/strain/23594,https://bacdive.dsmz.de/strain/23595,https://bacdive.dsmz.de/strain/23596,https://bacdive.dsmz.de/strain/23597,https://bacdive.dsmz.de/strain/23598,https://bacdive.dsmz.de/strain/23599,https://bacdive.dsmz.de/strain/152987,https://bacdive.dsmz.de/strain/152988,https://bacdive.dsmz.de/strain/152989,https://bacdive.dsmz.de/strain/152990,https://bacdive.dsmz.de/strain/1198,https://bacdive.dsmz.de/strain/130852,https://bacdive.dsmz.de/strain/131152,https://bacdive.dsmz.de/strain/2522,https://bacdive.dsmz.de/strain/24789,https://bacdive.dsmz.de/strain/24790,https://bacdive.dsmz.de/strain/132671,https://bacdive.dsmz.de/strain/140450,https://bacdive.dsmz.de/strain/132084,https://bacdive.dsmz.de/strain/7859,https://bacdive.dsmz.de/strain/155957,https://bacdive.dsmz.de/strain/24843,https://bacdive.dsmz.de/strain/130246,https://bacdive.dsmz.de/strain/153739,https://bacdive.dsmz.de/strain/131154,https://bacdive.dsmz.de/strain/2818,https://bacdive.dsmz.de/strain/153740,https://bacdive.dsmz.de/strain/131153,https://bacdive.dsmz.de/strain/2814,https://bacdive.dsmz.de/strain/2778,https://bacdive.dsmz.de/strain/2779,https://bacdive.dsmz.de/strain/140216,https://bacdive.dsmz.de/strain/158455,https://bacdive.dsmz.de/strain/158456,https://bacdive.dsmz.de/strain/158457,https://bacdive.dsmz.de/strain/3970,https://bacdive.dsmz.de/strain/3975,https://bacdive.dsmz.de/strain/4173,https://bacdive.dsmz.de/strain/4231,https://bacdive.dsmz.de/strain/4232,https://bacdive.dsmz.de/strain/4233,https://bacdive.dsmz.de/strain/4253,https://bacdive.dsmz.de/strain/157095,https://bacdive.dsmz.de/strain/139873,https://bacdive.dsmz.de/strain/5839,https://bacdive.dsmz.de/strain/10600,https://bacdive.dsmz.de/strain/140433,https://bacdive.dsmz.de/strain/131160,https://bacdive.dsmz.de/strain/131126,https://bacdive.dsmz.de/strain/154667,https://bacdive.dsmz.de/strain/154932,https://bacdive.dsmz.de/strain/157392,https://bacdive.dsmz.de/strain/132860,https://bacdive.dsmz.de/strain/132750,https://bacdive.dsmz.de/strain/132752,https://bacdive.dsmz.de/strain/158089,https://bacdive.dsmz.de/strain/158090,https://bacdive.dsmz.de/strain/132870,https://bacdive.dsmz.de/strain/132887,https://bacdive.dsmz.de/strain/23574,https://bacdive.dsmz.de/strain/156785,https://bacdive.dsmz.de/strain/16527,https://bacdive.dsmz.de/strain/148963,https://bacdive.dsmz.de/strain/155949,https://bacdive.dsmz.de/strain/155948,https://bacdive.dsmz.de/strain/143143,https://bacdive.dsmz.de/strain/8453,https://bacdive.dsmz.de/strain/8532,https://bacdive.dsmz.de/strain/18234,https://bacdive.dsmz.de/strain/18235,https://bacdive.dsmz.de/strain/18236,https://bacdive.dsmz.de/strain/18237,https://bacdive.dsmz.de/strain/18238,https://bacdive.dsmz.de/strain/18239,https://bacdive.dsmz.de/strain/18240,https://bacdive.dsmz.de/strain/18241,https://bacdive.dsmz.de/strain/18244,https://bacdive.dsmz.de/strain/18245,https://bacdive.dsmz.de/strain/18246,https://bacdive.dsmz.de/strain/18247,https://bacdive.dsmz.de/strain/18248,https://bacdive.dsmz.de/strain/18249,https://bacdive.dsmz.de/strain/18250,https://bacdive.dsmz.de/strain/18251,https://bacdive.dsmz.de/strain/18252,https://bacdive.dsmz.de/strain/23401,https://bacdive.dsmz.de/strain/23402,https://bacdive.dsmz.de/strain/23403,https://bacdive.dsmz.de/strain/23404,https://bacdive.dsmz.de/strain/23405,https://bacdive.dsmz.de/strain/23406,https://bacdive.dsmz.de/strain/23407,https://bacdive.dsmz.de/strain/23408,https://bacdive.dsmz.de/strain/23409,https://bacdive.dsmz.de/strain/23410,https://bacdive.dsmz.de/strain/23412,https://bacdive.dsmz.de/strain/23413,https://bacdive.dsmz.de/strain/23414,https://bacdive.dsmz.de/strain/23415,https://bacdive.dsmz.de/strain/23416,https://bacdive.dsmz.de/strain/23417,https://bacdive.dsmz.de/strain/23418,https://bacdive.dsmz.de/strain/23419,https://bacdive.dsmz.de/strain/23420,https://bacdive.dsmz.de/strain/23421,https://bacdive.dsmz.de/strain/23422,https://bacdive.dsmz.de/strain/23423,https://bacdive.dsmz.de/strain/18181,https://bacdive.dsmz.de/strain/19210,https://bacdive.dsmz.de/strain/19212,https://bacdive.dsmz.de/strain/20337,https://bacdive.dsmz.de/strain/20531,https://bacdive.dsmz.de/strain/20532,https://bacdive.dsmz.de/strain/20545,https://bacdive.dsmz.de/strain/20546,https://bacdive.dsmz.de/strain/20557,https://bacdive.dsmz.de/strain/20559,https://bacdive.dsmz.de/strain/20560,https://bacdive.dsmz.de/strain/20567,https://bacdive.dsmz.de/strain/20572,https://bacdive.dsmz.de/strain/10321,https://bacdive.dsmz.de/strain/10322,https://bacdive.dsmz.de/strain/10323,https://bacdive.dsmz.de/strain/10324,https://bacdive.dsmz.de/strain/10325,https://bacdive.dsmz.de/strain/10326,https://bacdive.dsmz.de/strain/10327,https://bacdive.dsmz.de/strain/10328,https://bacdive.dsmz.de/strain/10330,https://bacdive.dsmz.de/strain/10331,https://bacdive.dsmz.de/strain/10332,https://bacdive.dsmz.de/strain/10333,https://bacdive.dsmz.de/strain/10334,https://bacdive.dsmz.de/strain/10335,https://bacdive.dsmz.de/strain/10336,https://bacdive.dsmz.de/strain/10337,https://bacdive.dsmz.de/strain/10338,https://bacdive.dsmz.de/strain/10339,https://bacdive.dsmz.de/strain/10340,https://bacdive.dsmz.de/strain/10341,https://bacdive.dsmz.de/strain/10342,https://bacdive.dsmz.de/strain/10343,https://bacdive.dsmz.de/strain/10344,https://bacdive.dsmz.de/strain/10345,https://bacdive.dsmz.de/strain/10346,https://bacdive.dsmz.de/strain/10348,https://bacdive.dsmz.de/strain/10349,https://bacdive.dsmz.de/strain/10350,https://bacdive.dsmz.de/strain/10351,https://bacdive.dsmz.de/strain/10352,https://bacdive.dsmz.de/strain/10353,https://bacdive.dsmz.de/strain/10355,https://bacdive.dsmz.de/strain/10356,https://bacdive.dsmz.de/strain/10357,https://bacdive.dsmz.de/strain/10358,https://bacdive.dsmz.de/strain/10359,https://bacdive.dsmz.de/strain/10380,https://bacdive.dsmz.de/strain/10381,https://bacdive.dsmz.de/strain/10382,https://bacdive.dsmz.de/strain/10383,https://bacdive.dsmz.de/strain/10384,https://bacdive.dsmz.de/strain/10385,https://bacdive.dsmz.de/strain/10386,https://bacdive.dsmz.de/strain/10387,https://bacdive.dsmz.de/strain/10388,https://bacdive.dsmz.de/strain/10389,https://bacdive.dsmz.de/strain/10390,https://bacdive.dsmz.de/strain/10391,https://bacdive.dsmz.de/strain/10392,https://bacdive.dsmz.de/strain/10393,https://bacdive.dsmz.de/strain/10394,https://bacdive.dsmz.de/strain/10395,https://bacdive.dsmz.de/strain/10396,https://bacdive.dsmz.de/strain/10397,https://bacdive.dsmz.de/strain/10398,https://bacdive.dsmz.de/strain/10399,https://bacdive.dsmz.de/strain/10400,https://bacdive.dsmz.de/strain/10401,https://bacdive.dsmz.de/strain/10402,https://bacdive.dsmz.de/strain/10403,https://bacdive.dsmz.de/strain/10404,https://bacdive.dsmz.de/strain/10406,https://bacdive.dsmz.de/strain/10407,https://bacdive.dsmz.de/strain/10408,https://bacdive.dsmz.de/strain/10409,https://bacdive.dsmz.de/strain/10410,https://bacdive.dsmz.de/strain/10411,https://bacdive.dsmz.de/strain/10412,https://bacdive.dsmz.de/strain/10413,https://bacdive.dsmz.de/strain/10414,https://bacdive.dsmz.de/strain/10415,https://bacdive.dsmz.de/strain/10360,https://bacdive.dsmz.de/strain/10361,https://bacdive.dsmz.de/strain/10362,https://bacdive.dsmz.de/strain/10363,https://bacdive.dsmz.de/strain/10364,https://bacdive.dsmz.de/strain/10365,https://bacdive.dsmz.de/strain/10366,https://bacdive.dsmz.de/strain/10367,https://bacdive.dsmz.de/strain/10368,https://bacdive.dsmz.de/strain/10369,https://bacdive.dsmz.de/strain/10370,https://bacdive.dsmz.de/strain/10371,https://bacdive.dsmz.de/strain/10372,https://bacdive.dsmz.de/strain/10373,https://bacdive.dsmz.de/strain/10374,https://bacdive.dsmz.de/strain/10379,https://bacdive.dsmz.de/strain/10320,https://bacdive.dsmz.de/strain/139899,https://bacdive.dsmz.de/strain/10819,https://bacdive.dsmz.de/strain/157400,https://bacdive.dsmz.de/strain/11230,https://bacdive.dsmz.de/strain/11213,https://bacdive.dsmz.de/strain/11225,https://bacdive.dsmz.de/strain/11224,https://bacdive.dsmz.de/strain/11227,https://bacdive.dsmz.de/strain/11228,https://bacdive.dsmz.de/strain/11226,https://bacdive.dsmz.de/strain/11223,https://bacdive.dsmz.de/strain/11229,https://bacdive.dsmz.de/strain/140382,https://bacdive.dsmz.de/strain/16554,https://bacdive.dsmz.de/strain/16553,https://bacdive.dsmz.de/strain/140217,https://bacdive.dsmz.de/strain/140218,https://bacdive.dsmz.de/strain/140219,https://bacdive.dsmz.de/strain/156222,https://bacdive.dsmz.de/strain/131128,https://bacdive.dsmz.de/strain/24288,https://bacdive.dsmz.de/strain/13721,https://bacdive.dsmz.de/strain/132871,https://bacdive.dsmz.de/strain/154830,https://bacdive.dsmz.de/strain/154831,https://bacdive.dsmz.de/strain/154833,https://bacdive.dsmz.de/strain/132779,https://bacdive.dsmz.de/strain/156831,https://bacdive.dsmz.de/strain/6186,https://bacdive.dsmz.de/strain/155664,https://bacdive.dsmz.de/strain/141592,https://bacdive.dsmz.de/strain/141489,https://bacdive.dsmz.de/strain/157061,https://bacdive.dsmz.de/strain/147848,https://bacdive.dsmz.de/strain/147849,https://bacdive.dsmz.de/strain/147851,https://bacdive.dsmz.de/strain/147852,https://bacdive.dsmz.de/strain/158116,https://bacdive.dsmz.de/strain/158112,https://bacdive.dsmz.de/strain/132863,https://bacdive.dsmz.de/strain/131149,https://bacdive.dsmz.de/strain/131150,https://bacdive.dsmz.de/strain/131151,https://bacdive.dsmz.de/strain/139991,https://bacdive.dsmz.de/strain/158113,https://bacdive.dsmz.de/strain/158114,https://bacdive.dsmz.de/strain/158115,https://bacdive.dsmz.de/strain/3831,https://bacdive.dsmz.de/strain/131384,https://bacdive.dsmz.de/strain/131385,https://bacdive.dsmz.de/strain/132781,https://bacdive.dsmz.de/strain/13421,https://bacdive.dsmz.de/strain/132869,https://bacdive.dsmz.de/strain/132822,https://bacdive.dsmz.de/strain/24853,https://bacdive.dsmz.de/strain/23519,https://bacdive.dsmz.de/strain/155613,https://bacdive.dsmz.de/strain/154163,https://bacdive.dsmz.de/strain/132824,https://bacdive.dsmz.de/strain/132825,https://bacdive.dsmz.de/strain/155079,https://bacdive.dsmz.de/strain/18309,https://bacdive.dsmz.de/strain/18315,https://bacdive.dsmz.de/strain/18316,https://bacdive.dsmz.de/strain/22316,https://bacdive.dsmz.de/strain/22317,https://bacdive.dsmz.de/strain/22318,https://bacdive.dsmz.de/strain/14875,https://bacdive.dsmz.de/strain/14874,https://bacdive.dsmz.de/strain/16011,https://bacdive.dsmz.de/strain/16367,https://bacdive.dsmz.de/strain/16398,https://bacdive.dsmz.de/strain/16418,https://bacdive.dsmz.de/strain/16412,https://bacdive.dsmz.de/strain/16413,https://bacdive.dsmz.de/strain/16399,https://bacdive.dsmz.de/strain/16400,https://bacdive.dsmz.de/strain/16436,https://bacdive.dsmz.de/strain/16420,https://bacdive.dsmz.de/strain/158313,https://bacdive.dsmz.de/strain/16415,https://bacdive.dsmz.de/strain/16380,https://bacdive.dsmz.de/strain/131988,https://bacdive.dsmz.de/strain/157527,https://bacdive.dsmz.de/strain/16383,https://bacdive.dsmz.de/strain/16619,https://bacdive.dsmz.de/strain/16605,https://bacdive.dsmz.de/strain/16606,https://bacdive.dsmz.de/strain/16617,https://bacdive.dsmz.de/strain/16604,https://bacdive.dsmz.de/strain/16608,https://bacdive.dsmz.de/strain/140172,https://bacdive.dsmz.de/strain/140173,https://bacdive.dsmz.de/strain/140174,https://bacdive.dsmz.de/strain/140175,https://bacdive.dsmz.de/strain/140176,https://bacdive.dsmz.de/strain/158215,https://bacdive.dsmz.de/strain/158216,https://bacdive.dsmz.de/strain/158217,https://bacdive.dsmz.de/strain/16836,https://bacdive.dsmz.de/strain/16845,https://bacdive.dsmz.de/strain/131155,https://bacdive.dsmz.de/strain/16804,https://bacdive.dsmz.de/strain/16803,https://bacdive.dsmz.de/strain/16904,https://bacdive.dsmz.de/strain/24855,https://bacdive.dsmz.de/strain/18486,https://bacdive.dsmz.de/strain/18487,https://bacdive.dsmz.de/strain/18488,https://bacdive.dsmz.de/strain/18489,https://bacdive.dsmz.de/strain/18490,https://bacdive.dsmz.de/strain/18491,https://bacdive.dsmz.de/strain/18600,https://bacdive.dsmz.de/strain/18601,https://bacdive.dsmz.de/strain/18602,https://bacdive.dsmz.de/strain/18603,https://bacdive.dsmz.de/strain/18604,https://bacdive.dsmz.de/strain/18605,https://bacdive.dsmz.de/strain/18631,https://bacdive.dsmz.de/strain/18632,https://bacdive.dsmz.de/strain/18633,https://bacdive.dsmz.de/strain/18871,https://bacdive.dsmz.de/strain/18988,https://bacdive.dsmz.de/strain/19447,https://bacdive.dsmz.de/strain/19656,https://bacdive.dsmz.de/strain/19679,https://bacdive.dsmz.de/strain/19683,https://bacdive.dsmz.de/strain/20060,https://bacdive.dsmz.de/strain/20065,https://bacdive.dsmz.de/strain/20873,https://bacdive.dsmz.de/strain/20877,https://bacdive.dsmz.de/strain/20882,https://bacdive.dsmz.de/strain/20913,https://bacdive.dsmz.de/strain/20916,https://bacdive.dsmz.de/strain/21209,https://bacdive.dsmz.de/strain/21211,https://bacdive.dsmz.de/strain/21214,https://bacdive.dsmz.de/strain/21217,https://bacdive.dsmz.de/strain/21220,https://bacdive.dsmz.de/strain/21225,https://bacdive.dsmz.de/strain/21226,https://bacdive.dsmz.de/strain/21227,https://bacdive.dsmz.de/strain/21228,https://bacdive.dsmz.de/strain/21229,https://bacdive.dsmz.de/strain/21282,https://bacdive.dsmz.de/strain/22225,https://bacdive.dsmz.de/strain/22226,https://bacdive.dsmz.de/strain/22315,https://bacdive.dsmz.de/strain/22370,https://bacdive.dsmz.de/strain/22824,https://bacdive.dsmz.de/strain/22825,https://bacdive.dsmz.de/strain/23365,https://bacdive.dsmz.de/strain/23367,https://bacdive.dsmz.de/strain/23368,https://bacdive.dsmz.de/strain/23369,https://bacdive.dsmz.de/strain/23370,https://bacdive.dsmz.de/strain/23371,https://bacdive.dsmz.de/strain/23376,https://bacdive.dsmz.de/strain/23378,https://bacdive.dsmz.de/strain/23379,https://bacdive.dsmz.de/strain/23380,https://bacdive.dsmz.de/strain/23381,https://bacdive.dsmz.de/strain/23386,https://bacdive.dsmz.de/strain/23387,https://bacdive.dsmz.de/strain/23389,https://bacdive.dsmz.de/strain/23390,https://bacdive.dsmz.de/strain/23392,https://bacdive.dsmz.de/strain/23394,https://bacdive.dsmz.de/strain/23395,https://bacdive.dsmz.de/strain/24688,https://bacdive.dsmz.de/strain/24710,https://bacdive.dsmz.de/strain/24712,https://bacdive.dsmz.de/strain/24713,https://bacdive.dsmz.de/strain/130785,https://bacdive.dsmz.de/strain/130786,https://bacdive.dsmz.de/strain/130795,https://bacdive.dsmz.de/strain/130970,https://bacdive.dsmz.de/strain/130971,https://bacdive.dsmz.de/strain/132009,https://bacdive.dsmz.de/strain/132016,https://bacdive.dsmz.de/strain/132037,https://bacdive.dsmz.de/strain/139749,https://bacdive.dsmz.de/strain/139751,https://bacdive.dsmz.de/strain/157746
+1,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Archaea,Bacteria,Bacteria,Bacteria,Not assigned to order,Not assigned to order,Bacteria,Not assigned to order,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Archaea,Bacteria,Not assigned to order,Not assigned to order,Betaproteobacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Bacteria,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Archaea,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Not assigned to order,Not assigned to order,Bacteria,Not assigned to order,Bacteria,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Not assigned to order,Not assigned to order,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Not assigned to order,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Archaea,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Bacteria,Clostridiales,Bacteria,Bacteria,Clostridiales
+2,Acidobacteria,Acidobacteria,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Not assigned to family,Firmicutes,Cyanobacteria,Proteobacteria,not assigned to phylum,unclassified,unclassified,Not assigned to family,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Firmicutes,Not assigned to family,Firmicutes,Firmicutes,Bacteroidetes,Bacteroidetes,Crenarchaeota,Verrucomicrobia,Firmicutes,Actinobacteria,Not assigned to family,Not assigned to family,Firmicutes,Not assigned to family,Firmicutes,Firmicutes,Not assigned to family,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Cyanobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Actinobacteria,Not assigned to family,Bacteroidetes,Actinobacteria,Actinobacteria,Proteobacteria,Euryarchaeota,Proteobacteria,Not assigned to family,Not assigned to family,Not assigned to order,Proteobacteria,Not assigned to family,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Not assigned to family,Actinobacteria,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Actinobacteria,Actinobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Euryarchaeota,Actinobacteria,Not assigned to family,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Cyanobacteria,Actinobacteria,Actinobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Not assigned to family,Verrucomicrobia,Firmicutes,Proteobacteria,Bacteroidetes,Not assigned to family,Not assigned to family,Not assigned to family,Proteobacteria,Not assigned to family,Proteobacteria,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Proteobacteria,Not assigned to family,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Bacteroidetes,Planctomycetes,Planctomycetes,Proteobacteria,Actinobacteria,Bacteroidetes,Not assigned to family,Actinobacteria,Acidobacteria,Not assigned to family,Not assigned to family,Bacteroidetes,Bacteroidetes,Not assigned to family,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Not assigned to family,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Firmicutes,Crenarchaeota,Actinobacteria,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,unclassified,unclassified,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,Proteobacteria,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,not assigned to phylum,Not assigned to family,not assigned to phylum,not assigned to phylum,Not assigned to family
+3,Acidobacteriia,Acidobacteriia,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Alphaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Gammaproteobacteria,Anaeroflexus,Clostridia,"Cyanobacteria, not assigned to class",Betaproteobacteria,not assigned to class and not assigned to phylum,unclassified,unclassified,Azospirillum,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacilli,Bacillus,Bacillus,Bacillus,Bacillus,Bacilli,Barnettozyma,Clostridia,Clostridia,"Bacteroidetes, not assigned to class","Bacteroidetes, not assigned to class",Crenarchaeota,"Verrucomicrobia, not assigned to class",Clostridia,Actinobacteria,Chungangia,Clavisporangium,Clostridia,Clostridium,Clostridia,Clostridia,Clostridium,Clostridia,Clostridia,Clostridia,Clostridia,"Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class",Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Actinobacteria,Elizabethkingia,Cytophagia,Actinobacteria,Actinobacteria,Alphaproteobacteria,Halobacteria,Gammaproteobacteria,Janibacter,Jannaschia,Oxalobacteraceae,Alphaproteobacteria,Lyalikoviella,Gammaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Gammaproteobacteria,Gammaproteobacteria,Gammaproteobacteria,Massilia,Actinobacteria,Micrococcus,Micrococcus,Micrococcus,Moraxella,Actinobacteria,Actinobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Halobacteria,Actinobacteria,Nocardia,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,"Cyanobacteria, not assigned to class",Actinobacteria,Actinobacteria,"Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class",Oceanisphaera,Opitutae,Bacilli,Alphaproteobacteria,Sphingobacteriia,Polaromonas,Polaromonas,Polaromonas,Alphaproteobacteria,Prauserella,Alphaproteobacteria,Pseudacidovorax,Pseudomonas,Pseudomonas,Pseudomonas,Psychrobacter,Psychrobacter,Psychrobacter,Psychrobacter,Alphaproteobacteria,Rhizobiales,Alphaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Alphaproteobacteria,Cytophagia,Planctomycetacia,Planctomycetacia,Alphaproteobacteria,Actinobacteria,Flavobacteriia,Sanuguinoglea,Actinobacteria,Acidobacteriia,Sphingomonas,Sphingomonas,Cytophagia,Cytophagia,Sporosarcina,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Streptomyces,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,Actinobacteria,"Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class","Cyanobacteria, not assigned to class",Clostridia,Clostridia,Clostridia,Clostridia,Clostridia,Thermoprotei,Actinobacteria,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,unclassified,unclassified,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,Deltaproteobacteria,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,unclassified,not assigned to class and not assigned to phylum,not assigned to class and not assigned to phylum,unclassified
+4,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Actinomycetales,Actinomycetales,Rhizobiales,Rhizobiales,Rhizobiales,Chromatiales,Anaeroflexus maritimus,Not assigned to order,Not assigned to order,Neisseriales,Not assigned to order,unclassified,unclassified,Azospirillum himalayense,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillales,Bacillus macroides,Bacillus macroides,Bacillus macroides,Bacillus macroides,Bacillales,Barnettozyma vustinii,Thermoanaerobacterales,Clostridiales,"Bacteroidetes, not assigned to order","Bacteroidetes, not assigned to order","Crenarchaeota, not assigned to order",Not assigned to order,Clostridiales,Actinomycetales,Chungangia songklaensis,Clavisporangium rectum,Clostridiales,Clostridium boliviensis,Clostridiales,Clostridiales,Clostridium sulfatireducens,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Desulfobacterales,Desulfobacterales,Desulfovibrionales,Desulfuromonadales,Desulfuromonadales,Desulfuromonadales,Actinomycetales,Elizabethkingia miricola  subsp. antiqua,Cytophagales,Actinomycetales,Actinomycetales,Clostridiales,Halobacteriales,Oceanospirillales,Janibacter marinus,Jannaschia saemankumensis,Janthinobacterium,Rhizobiales,Lyalikoviella elongata,Chromatiales,Not assigned to order,Not assigned to order,Alteromonadales,Alteromonadales,Alteromonadales,Massilia licheniformis,Actinomycetales,Micrococcus deepwellae,Micrococcus galatheae,Micrococcus maximus,Moraxella 'paraphenylpyruvica',Actinomycetales,Actinomycetales,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Halobacteriales,Actinomycetales,Nocardia lucida,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Not assigned to order,Actinomycetales,Actinomycetales,Not assigned to order,Not assigned to order,Not assigned to order,Oceanisphaera halophilus,Opitutales,Bacillales,Rhodobacterales,Sphingobacteriales,Polaromonas kiwa,Polaromonas kiwa,Polaromonas kiwa,Sphingomonadales,Prauserella kuwaitensis,Rhizobiales,Pseudacidovorax austerolens,Pseudomonas aromatica,Pseudomonas cruciviae,Pseudomonas majoricensis,Psychrobacter 'antarctica',Psychrobacter 'antarctica',Psychrobacter 'antarctica',Psychrobacter 'antarctica',Not assigned to order,Rhizobiales (not further classified),Rhodobacterales,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Cytophagales,Planctomycetales,Planctomycetales,Rhodobacterales,Actinomycetales,Not assigned to order,Sanuguinoglea alkalitolerans,Not assigned to order,Acidobacteriales,Sphingomonas echinoides-complex,Sphingomonas rhizogenes,Cytophagales,Cytophagales,Sporosarcina ginsengisoli,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Streptomyces rubrireticuli,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Not assigned to order,Thermoanaerobacterales,Thermoanaerobacterales,"Clostridia, not assigned to order",Thermoanaerobacterales,Thermoanaerobacterales,Thermoproteales,Not assigned to order,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,unclassified,unclassified,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,Clostridiales,unclassified bacterium,Clostridiales,Clostridiales,unclassified bacterium
+5,Acidobacteriaceae,Acidobacteriaceae,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,"Actinobacteria, not assigned to family","Actinobacteria, not assigned to family","Actinobacteria, not assigned to family","Actinobacteria, not assigned to family","Actinobacteria, not assigned to family",Micromonosporaceae,Actinopolysporaceae,Bradyrhizobiaceae,Rhizobiaceae,Rhizobiaceae,Chromatiaceae,Anaeroflexus maritimus Stetter et al.,Lachnospiraceae,"Cyanobacteria, not assigned to family",Chromobacteriaceae,Not assigned to family,unclassified,unclassified,,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,Bacillaceae,,,,,Bacillaceae,"Barnettozyma vustinii Yurkov, Schäfer & Begerow 2010",Thermoanaerobacteraceae,Clostridiaceae,"Bacteroidetes, not assigned to family","Bacteroidetes, not assigned to family","Crenarchaeota, not assigned to family","Verrucomicrobia, not assigned to family","Clostridia, not assigned to family",Micromonosporaceae,,Clavisporangium rectum Nakajima et al.,Clostridiaceae,,Clostridiaceae,Clostridiaceae,,Clostridiaceae,Clostridiaceae,Clostridiaceae,Clostridiaceae,"Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family",Desulfobacteraceae,Desulfobacteraceae,Desulfovibrionaceae,Desulfuromonadaceae,Desulfuromonadaceae,Desulfuromonadaceae,Dietziaceae,,Cytophagaceae,Glycomycetaceae,Gordoniaceae,"Alphaproteobacteria, not assigned to family",Halorubraceae,Halomonadaceae,,,Janthinobacterium lividium,Xanthobacteraceae,Lyalikoviella elongata,Chromatiaceae,Rhodobacteraceae,Rhodobacteraceae,Alteromonadaceae,Alteromonadaceae,Alteromonadaceae,,Streptosporangiaceae,,,,,Mycobacteriaceae,Mycobacteriaceae,"Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family","Myxococcales, not assigned to family",Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Myxococcaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Nannocystaceae,Natrialbaceae,Nocardiaceae,Nocardia lucida,Nocardiopsaceae,Nocardiopsaceae,Nocardiopsaceae,Nocardiopsaceae,Nocardiopsaceae,Nocardiopsaceae,Nocardiopsaceae,Nocardiopsaceae,Nocardiopsaceae,"Cyanobacteria, not assigned to family",Streptosporangiaceae,Streptosporangiaceae,"Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family",,Opitutaceae,Paenibacillaceae,Rhodobacteraceae,Sphingobacteriaceae,,,,Erythrobacteraceae,,Hyphomicrobiaceae,,,,,,,,,Rhizobiaceae,Rhizobiales (not further classified),Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Cyclobacteriaceae,Planctomycetaceae,Planctomycetaceae,Rhodobacteraceae,Pseudonocardiaceae,Cryomorphaceae,Sanuguinoglea alkalitolerans,Thermomonosporaceae,"Acidobacteriia, not assigned to family",,,Cytophagaceae,Cytophagaceae,,Cystobacteraceae,Cystobacteraceae,Cystobacteraceae,Cystobacteraceae,Cystobacteraceae,Cystobacteraceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomycetaceae,Streptomyces rubrireticuli,Streptomycetaceae,Streptosporangiaceae,Streptosporangiaceae,Streptosporangiaceae,Streptosporangiaceae,Streptosporangiaceae,Streptosporangiaceae,"Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family","Cyanobacteria, not assigned to family",Thermoanaerobacteraceae,Thermoanaerobacteraceae,"Clostridia, not assigned to family",Thermoanaerobacteraceae,Thermoanaerobacteraceae,Thermofilaceae,Streptomycetaceae,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,unclassified,unclassified,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,Not assigned to family,unclassified bacterium,Not assigned to family,Not assigned to family,unclassified bacterium
+6,Acidobacteriaceae,Acidobacteriaceae,Actinacidiphilus,Actinoacidiphilus,Actinoacidiphilus,Actinoacidiphilus,Actinobacteria,Actinomycetales,Actinomycetales,Actinomycetales,Actinomycetales,Actinoplanes,Actinopolyspora,Afipia,Agrobacterium,Agrobacterium,Allochromatium,Pl-12fs,Anoxycellum,Aphanothece,Aquaspirillum,Astrosporangium,Atactangium,Atactangium,mesophilic,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Bacillus,Oil-contaminated rhizosphere of Galega orientalis,"
+
+
+Type of FA analysis
+whole cell analysis
+
+
+Incubation medium
+
+
+
+Agar/liquid
+
+
+
+Incubation temperature (°C)
+
+
+
+Incubation time (d)
+
+
+
+Incubation pH
+
+
+
+Incubation oxygen condition
+
+
+
+Treatment/condition
+
+
+
+Software version
+
+
+
+Library/peak naming table
+
+
+
+System
+
+
+
+Instrument
+
+
+
+Method/protocol
+CCUG
+
+
+Cutoff value
+
+
+Reference [Ref.: #58032]
+
+
+
+
+Fatty acid
+Percentage
+ECL 
+
+
+
+C14:0
+1.5
+14
+
+
+C15:0
+0.5
+15
+
+
+C16:0
+2.6
+16
+
+
+C14:0 ISO
+12.2
+13.618
+
+
+C15:0 ANTEISO
+47.9
+14.711
+
+
+C15:0 ISO
+20
+14.621
+
+
+C16:0 iso
+5.3
+15.626
+
+
+C16:1 ω11c
+2.8
+15.757
+
+
+C16:1 ω7c alcohol
+3.7
+15.386
+
+
+C17:0 anteiso
+1.4
+16.722
+
+
+C17:0 iso
+0.8
+16.629
+
+
+C17:1 ISO I/C16:0 DMA
+0.7
+16.481
+
+
+C18:2 ω6,9c/C18:0 ANTE
+0.7
+17.724
+
+
+
+
+
+
+",Oil-contaminated rhizosphere of Galega orientalis,Oil-contaminated rhizosphere of Galega orientalis,Bacillus,,Caldanaerobacter,Caloramator,Candidatus Amoebophilus,Candidatus Amoebophilus,Candidatus Nitrososphaera,Candidatus Rhizospheria,Carboxydocella,Catellatospora,mesophilic,J11,Clostridium,Sludge,Clostridium,Clostridium,Microalgae biomass from a thermal lake,Clostridium,Clostridium,Clostridium,Clostridium,Cyanobacteria,Cyanobacteria,Cyanobacteria,Cyanobacteria,Desulfobacterium,Desulfobacterium,Desulfovibrio,Desulfuromonas,Desulfuromonas,Desulfuromonas,Dietzia,mesophilic,Flectobacillus,Glycomyces,Gordonia,Gottschalkia,Halorubrum,Halovibrio,mesophilic,mesophilic,Janthinobacterium lividium; (Eisenberg 1891) De Ley et al. 1978,Labrys,SK 1,Marichromatium,Marinibacterium,Marinibacterium,Marinobacter,Marinobacter,Marinobacter,mesophilic,Microbispora,mesophilic,mesophilic,mesophilic,Air in piggery,Mycobacterium,Mycobacterium,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcales,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Myxococcus,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Nannocystis,Natronorubrum,Nocardia,,Nocardiopsis,Nocardiopsis,Nocardiopsis,Nocardiopsis,Nocardiopsis,Nocardiopsis,Nocardiopsis,Nocardiopsis,Nocardiopsis,Nodularia,Nonomuraea,Nonomuraea,Nostoc,Nostoc,Nostoc,mesophilic,Opitutus,Paenibacillus,Paracoccus,Pedobacter,mesophilic,mesophilic,mesophilic,Porphyrobacter,"Soil,oil contaminated",Prosthecomicrobium,mesophilic,mesophilic,mesophilic,mesophilic,aerobe,aerobe,psychrophilic,aerobe,Rhizobiaceae,Matomo55,Rhodobacter,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodobacteraceae,Rhodonellum,Rhodopirellula,Rhodopirellula,Roseovarius,Saccharomonospora,Salibacter,Nu,Sarraceniospora,Solibacter,mesophilic,mesophilic,Spirosoma,Spirosoma,mesophilic,Stigmatella,Stigmatella,Stigmatella,Stigmatella,Stigmatella,Stigmatella,Streptacidiphilus,Streptacidiphilus,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,Streptomyces,,Streptomyces,Streptosporangium,Streptosporangium,Streptosporangium,Streptosporangium,Streptosporangium,Streptosporangium,Synechococcus,Synechococcus,Synechococcus,Synechococcus,Synechococcus,Synechococcus,Synechococcus,Synechococcus,Thermoanaerobacter,Thermoanaerobacter,Thermoanaerobacterium,Thermoanaerobium,Thermoanaerobium,Thermofilum,Trichotomospora,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,unclassified,LC8,unclassified,unclassified,RS22 G
+7,Acidobacteriaceae sp.,Acidobacteriaceae sp.,Actinacidiphilus wushanense,Actinoacidiphilus directus,Actinoacidiphilus flexuosus,Actinoacidiphilus helicoides,Actinobacteria sp.,Actinomycetales sp.,Actinomycetales sp.,Actinomycetales sp.,Actinomycetales sp.,Actinoplanes gratiae,Actinopolyspora salina,Afipia lausannensis,Agrobacterium agile,Agrobacterium luteum,Allochromatium palmeri,,Anoxycellum osoensis,Aphanothece stagnina,Aquaspirillum bipunctata,Astrosporangium hypotensionis,Atactangium sp.,Atactangium sp.,aerobe,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,"
+
+
+#Engineered
+#Contamination
+#Oil (Fuel)
+
+
+#Environmental
+#Terrestrial
+#Soil
+
+
+#Host
+#Plants
+#Herbaceous plants (Grass,Crops)
+
+
+#Host Body-Site
+#Plant
+#Rhizosphere
+
+
+What are isolation sources categories?
+",Oil-contaminated rhizosphere of Galega orientalis,"
+
+
+#Engineered
+#Contamination
+#Oil (Fuel)
+
+
+#Environmental
+#Terrestrial
+#Soil
+
+
+#Host
+#Plants
+#Herbaceous plants (Grass,Crops)
+
+
+#Host Body-Site
+#Plant
+#Rhizosphere
+
+
+What are isolation sources categories?
+","
+
+
+#Engineered
+#Contamination
+#Oil (Fuel)
+
+
+#Environmental
+#Terrestrial
+#Soil
+
+
+#Host
+#Plants
+#Herbaceous plants (Grass,Crops)
+
+
+#Host Body-Site
+#Plant
+#Rhizosphere
+
+
+What are isolation sources categories?
+",Bacillus thermoterrestis,"
+POTATO DEXTROSE AGAR (DSMZ Medium 129), 22°C
+",Caldanaerobacter subterraneus  subsp. uzonensis,Caloramator uzoniensis,Candidatus Amoebophilus asiaticus,Candidatus Amoebophilus asiaticus,Candidatus Nitrososphaera gargensis,Candidatus Rhizospheria sp.,Carboxydocella ferrireducans,Catellatospora yuxiensis,aerobe,,Clostridium boliviensis,2000-07-01,Clostridium hveragerdense,Clostridium ragsdalei,2001-08-01,Clostridium thermoislandicum,Clostridium tunisiense,Clostridium uzonii,Clostridium uzonii,Cyanobacteria sp.,Cyanobacteria sp.,Cyanobacteria sp.,Cyanobacteria sp.,Desulfobacterium oleovorans,Desulfobacterium zeppelinii,Desulfovibrio singaporenus,Desulfuromonas succinoxidans,Desulfuromonas succinoxidans,Desulfuromonas succinoxidans,Dietzia dagingensis,aerobe,Flectobacillus speluncae,Glycomyces illinoisensis,Gordonia australis,Gottschalkia methylica,Halorubrum africanae,Halovibrio mesolongii,aerobe,aerobe,,Labrys ginsengisoli,,Marichromatium imhoffii,Marinibacterium anthonyi,Marinibacterium anthonyi,Marinobacter kribbensis,Marinobacter profunda,Marinobacter squelenovorans,aerobe,Microbispora griseoalba,aerobe,aerobe,aerobe,1985-02-01,Mycobacterium petroleophilum,Mycobacterium yunnanensis,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. aggregans,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. cinnabaria,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. glomerata,Nannocystis exedens  subsp. pulla,Natronorubrum thiooxidans,Nocardia albiflava,"
+Nutrient Agar (NA)
+",Nocardiopsis aegyptia  subsp. aurantiaca,Nocardiopsis arabicus,Nocardiopsis buerjinensis,Nocardiopsis chakaensis,Nocardiopsis fragmentaris,Nocardiopsis fragmentaris,Nocardiopsis rampartis,Nocardiopsis tangguensis,Nocardiopsis yanqiensis,Nodularia spumigena,Nonomuraea asiatica,Nonomuraea latina,Nostoc punctiforme,Nostoc punctiforme,Nostoc punctiforme,aerobe,Opitutus paludus,Paenibacillus triticisoli,Paracoccus bogoriensis,Pedobacter kribbensis,aerobe,aerobe,aerobe,Porphyrobacter meromictus,2003-10-05,Prosthecomicrobium polyspheroidum,aerobe,aerobe,aerobe,aerobe,"Soil,ornithogenic","Soil,ornithogenic",aerobe,"Soil,ornithogenic",Rhizobiaceae not further classified,,Rhodobacter maritimus,Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodonellum ikkaensis,Rhodopirellula apulia,Rhodopirellula islandica,Roseovarius pelophilus,Saccharomonospora caesia,Salibacter luridus,,Sarraceniospora aurea,Solibacter usitatus,aerobe,aerobe,Spirosoma escalantus,Spirosoma navajo,aerobe,Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Streptacidiphilus griseisporus,Streptacidiphilus luteoalbus,Streptomyces cattleya,Streptomyces cebimarensis,Streptomyces chungwhensis,Streptomyces garden,Streptomyces ginsengisoli,Streptomyces ginsengisoli,Streptomyces halotolerans,Streptomyces himgriensis,Streptomyces hygroscopicus  subsp. enhygrus,Streptomyces mentougouensis,Streptomyces myrophorea,Streptomyces panaciterrae,Streptomyces phemorphus,Streptomyces reticuli,"
+Marine Agar (MA)
+",Streptomyces sannurensis,Streptosporangium aureofuscum,Streptosporangium brasiliense,Streptosporangium koreanum,Streptosporangium kunmingense,Streptosporangium rubrum,Streptosporangium vulgare  subsp. antibioticum,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Thermoanaerobacter cellulolyticus,Thermoanaerobacter kreatinophilus,Thermoanaerobacterium islandicum,Thermoanaerobium crenophilum,Thermoanaerobium lactoethylicum,Thermofilum librum,Trichotomospora caesia,Hy m25,Hy m24,Hy m22,Hy m20,Hy m21,Hy m19,Ar HE9,Ar HE8,Ar HE7,Ar HE6,Ar HE5,Ar HE4,Ar HE1,Ar HE2,Ar HE3,unclassified,unclassified,unclassified,unclassified,Hy m7,Hy m3,Na p2,Na p8,Na p32,Na p31,Na p19,Na p12,Na p11,Ar HE14,Ar HE13,Ar HE12,Ar HE11,Ar HE10,Ar HE19,Ar HE18,Ar HE17,Ar HE16,Ar HE15,Ar HE20,Cb gl15,Cb gl12,Cb gl17,unclassified,Cb gl9,Cb gl6,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,,unclassified bacterium,unclassified bacterium,
+8,Acidobacteriaceae sp.,Acidobacteriaceae sp.,Actinacidiphilus wushanense Cui et al.,Actinoacidiphilus directus,Actinoacidiphilus flexuosus,Actinoacidiphilus helicoides,unclassified bacterium,Actinomycetales sp.,Actinomycetales sp.,Actinomycetales sp.,Actinomycetales sp.,Actinoplanes gratiae,Actinopolyspora salina,Afipia lausannensis,Agrobacterium agile,Agrobacterium luteum,Allochromatium palmeri Herbert et al.,"
+METHANOCOCCOIDES MEDIUM (DSMZ Medium 141c), with strain-specific modifications, anaerobic
+",Anoxycellum osoensis,Aphanothece stagnina,Aquaspirillum bipunctata Dubinia et al.,Astrosporangium hypotensionis Du et al.,Atactangium sp.,Atactangium sp.,Soil,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,Bacillus aminovorans,"CCUG 48199, HAMBI 2389/2","
+
+
+#Engineered
+#Contamination
+#Oil (Fuel)
+
+
+#Environmental
+#Terrestrial
+#Soil
+
+
+#Host
+#Plants
+#Herbaceous plants (Grass,Crops)
+
+
+#Host Body-Site
+#Plant
+#Rhizosphere
+
+
+What are isolation sources categories?
+","CCUG 48201, HAMBI 2375/2","CCUG 48202, HAMBI 2406/2",Bacillus thermoterrestis,,Caldanaerobacter subterraneus  subsp. uzonensis,Caloramator uzoniensis,Candidatus Amoebophilus asiaticus Horn et al. 2001,Candidatus Amoebophilus asiaticus Horn et al. 2001,Candidatus Nitrososphaera gargensis,Candidatus Rhizospheria sp.,Carboxydocella ferrireducans,Catellatospora yuxiensis,Soil,"
+ROLLED OATS MINERAL MEDIUM (DSMZ Medium 84)
+",Clostridium boliviensis,"Oruro,Lakajahuira river",Clostridium hveragerdense,Clostridium ragsdalei,"Potosí,Laguna Challviri",Clostridium thermoislandicum,Clostridium tunisiense Thabet et al. 2004,Clostridium uzonii Krivenko et al.,Clostridium uzonii Krivenko et al.,Cyanobacteria sp.,Cyanobacteria sp.,Cyanobacteria sp.,Cyanobacteria sp.,Desulfobacterium oleovorans Aeckersberg et al.,Desulfobacterium zeppelinii,Desulfovibrio singaporenus Sheng et al.,Desulfuromonas succinoxidans,Desulfuromonas succinoxidans,Desulfuromonas succinoxidans,Dietzia dagingensis Nazina et al.,"Water,environmental sample",Flectobacillus speluncae Denner et al.,Glycomyces illinoisensis,Gordonia australis Stainsby et al.,Gottschalkia methylica Firsova et al. 2010,Halorubrum africanae,Halovibrio mesolongii,Seawater,Tidal flat sediment,"
+Nutrient Agar (NA)
+",Labrys ginsengisoli,"
+LYALIKOVIELLA MEDIUM (DSMZ Medium 1415)
+",Marichromatium imhoffii,"Marinibacterium anthonyi Petersen et al., 2019","Marinibacterium anthonyi Petersen et al., 2019",Marinobacter kribbensis,Marinobacter profunda,Marinobacter squelenovorans,Clay sample,Microbispora griseoalba,"
+
+
+Type of FA analysis
+whole cell analysis
+
+
+Incubation medium
+
+
+
+Agar/liquid
+
+
+
+Incubation temperature (°C)
+
+
+
+Incubation time (d)
+
+
+
+Incubation pH
+
+
+
+Incubation oxygen condition
+
+
+
+Treatment/condition
+
+
+
+Software version
+
+
+
+Library/peak naming table
+
+
+
+System
+
+
+
+Instrument
+
+
+
+Method/protocol
+CCUG
+
+
+Cutoff value
+
+
+Reference [Ref.: #53297]
+
+
+
+
+Fatty acid
+Percentage
+ECL 
+
+
+
+C14:0
+0.6
+14
+
+
+C16:0
+1.1
+16
+
+
+C13:0 ANTEISO
+1.4
+12.701
+
+
+C13:0 iso
+0.9
+12.612
+
+
+C14:0 ISO
+6.4
+13.618
+
+
+C15:0 ANTEISO
+62.8
+14.711
+
+
+C15:0 ISO
+21.1
+14.621
+
+
+C16:0 iso
+3.7
+15.626
+
+
+C17:0 anteiso
+0.9
+16.722
+
+
+C18:2 ω6,9c/C18:0 ANTE
+1.2
+17.724
+
+
+
+
+
+
+","Water,tank,turbot larval rearing unit",Seawater collected during the galathea3 expedition,Åstorp,Mycobacterium petroleophilum,Mycobacterium yunnanensis Li et al.,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcales unclassified,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Myxococcus exiguus,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. aggregans Reichenbach 2005,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. cinnabaria Reichenbach et al.,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. glomerata Reichenbach 2005,Nannocystis exedens  subsp. pulla Reichenbach 2005,Natronorubrum thiooxidans,Nocardia albiflava,,Nocardiopsis aegyptia  subsp. aurantiaca Li et al.,Nocardiopsis arabicus Li et al.,Nocardiopsis buerjinensis,Nocardiopsis chakaensis,Nocardiopsis fragmentaris Liping,Nocardiopsis fragmentaris Liping,Nocardiopsis rampartis,Nocardiopsis tangguensis,Nocardiopsis yanqiensis Liping,Nodularia spumigena,Nonomuraea asiatica,Nonomuraea latina,Nostoc punctiforme,Nostoc punctiforme,Nostoc punctiforme,Marine red algae (Laurenciae sp.),Opitutus paludus,Paenibacillus triticisoli,Paracoccus bogoriensis Osanjo et. al.,Pedobacter kribbensis,Water,Water,"
+
+
+Type of FA analysis
+whole cell analysis
+
+
+Incubation medium
+
+
+
+Agar/liquid
+
+
+
+Incubation temperature (°C)
+
+
+
+Incubation time (d)
+
+
+
+Incubation pH
+
+
+
+Incubation oxygen condition
+
+
+
+Treatment/condition
+
+
+
+Software version
+
+
+
+Library/peak naming table
+
+
+
+System
+
+
+
+Instrument
+
+
+
+Method/protocol
+CCUG
+
+
+Cutoff value
+
+
+Reference [Ref.: #60551]
+
+
+
+
+Fatty acid
+Percentage
+ECL 
+
+
+
+C14:0
+0.5
+14
+
+
+C15:0
+2.6
+15
+
+
+C16:0
+24.3
+16
+
+
+C17:0
+0.5
+17
+
+
+C15:1 ω6c
+1.2
+14.856
+
+
+C16:1 ω7c
+51.5
+15.819
+
+
+C17:1 ω6c
+3.4
+16.862
+
+
+C18:1 ω7c /12t/9t
+12.5
+17.824
+
+
+C18:2 ω6,9c/C18:0 ANTE
+0.4
+17.724
+
+
+C8:0 3OH
+3
+9.385
+
+
+
+
+
+
+",Porphyrobacter meromictus ???,North of Al-Sabbiyah area,Prosthecomicrobium polyspheroidum,"
+
+
+Type of FA analysis
+whole cell analysis
+
+
+Incubation medium
+
+
+
+Agar/liquid
+
+
+
+Incubation temperature (°C)
+
+
+
+Incubation time (d)
+
+
+
+Incubation pH
+
+
+
+Incubation oxygen condition
+
+
+
+Treatment/condition
+
+
+
+Software version
+
+
+
+Library/peak naming table
+
+
+
+System
+
+
+
+Instrument
+
+
+
+Method/protocol
+CCUG
+
+
+Cutoff value
+
+
+Reference [Ref.: #61756]
+
+
+
+
+Fatty acid
+Percentage
+ECL 
+
+
+
+C12:0
+4.2
+12
+
+
+C14:0
+5.5
+14
+
+
+C16:0
+34.4
+16
+
+
+C18:0
+0.9
+18
+
+
+C10:0 3OH
+3.9
+11.423
+
+
+C16:1 ω7c
+7
+15.819
+
+
+C17:0 CYCLO
+21.9
+16.888
+
+
+C18:1 ω7c /12t/9t
+20.7
+17.824
+
+
+C8:0 3OH
+1.6
+9.385
+
+
+
+
+
+
+","
+
+
+Type of FA analysis
+whole cell analysis
+
+
+Incubation medium
+
+
+
+Agar/liquid
+
+
+
+Incubation temperature (°C)
+
+
+
+Incubation time (d)
+
+
+
+Incubation pH
+
+
+
+Incubation oxygen condition
+
+
+
+Treatment/condition
+
+
+
+Software version
+
+
+
+Library/peak naming table
+
+
+
+System
+
+
+
+Instrument
+
+
+
+Method/protocol
+CCUG
+
+
+Cutoff value
+
+
+Reference [Ref.: #44653]
+
+
+
+
+Fatty acid
+Percentage
+ECL 
+
+
+
+C12:0
+4
+12
+
+
+C14:0
+0.7
+14
+
+
+C15:0
+0.4
+15
+
+
+C16:0
+31.9
+16
+
+
+C17:0
+0.3
+17
+
+
+C18:0
+0.5
+18
+
+
+C10:0 3OH
+4.7
+11.423
+
+
+C12:0 2OH
+4.4
+13.178
+
+
+C12:0 3OH
+4
+13.455
+
+
+C16:1 ω7c
+29.6
+15.819
+
+
+C17:0 CYCLO
+10.3
+16.888
+
+
+C18:1 ω7c /12t/9t
+7.7
+17.824
+
+
+C18:1 ω9c
+0.4
+17.769
+
+
+C18:2 ω6,9c/C18:0 ANTE
+0.7
+17.724
+
+
+C19:0 CYCLO ω8c
+0.5
+18.9
+
+
+
+
+
+
+",Soil,Agricultural soil,1991-12-01,1991-12-01,"Soil,ornithogenic",1991-12-01,Rhizobiaceae not further classified,"
+NITRATIRUPTOR AND NITRATIFACTOR MEDIUM (DSMZ Medium 1024), pH 6.8
+",Rhodobacter maritimus,Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodobacteraceae (not further classified),Rhodonellum ikkaensis,Rhodopirellula apulia,Rhodopirellula islandica,Roseovarius pelophilus,Saccharomonospora caesia,Salibacter luridus,"
+LYALIKOVIELLA MEDIUM (DSMZ Medium 1415)
+",Sarraceniospora aurea Tamura and Hatano 1998,Solibacter usitatus Ward et al. 2009,"
+
+
+Type of FA analysis
+whole cell analysis
+
+
+Incubation medium
+
+
+
+Agar/liquid
+
+
+
+Incubation temperature (°C)
+
+
+
+Incubation time (d)
+
+
+
+Incubation pH
+
+
+
+Incubation oxygen condition
+
+
+
+Treatment/condition
+
+
+
+Software version
+
+
+
+Library/peak naming table
+
+
+
+System
+
+
+
+Instrument
+
+
+
+Method/protocol
+CCUG
+
+
+Cutoff value
+
+
+Reference [Ref.: #61675]
+
+
+
+
+Fatty acid
+Percentage
+ECL 
+
+
+
+C16:0
+23.3
+16
+
+
+C18:0
+1
+18
+
+
+11 methyl 18:1 ω7c
+3.8
+18.081
+
+
+C14:0 2OH
+2.7
+15.205
+
+
+C16:1 ω5c
+0.6
+15.908
+
+
+C16:1 ω7c
+0.4
+15.819
+
+
+C17:1 ω6c
+4.1
+16.862
+
+
+C18:1 ω5c
+2.9
+17.919
+
+
+C18:1 ω7c /12t/9t
+61.3
+17.824
+
+
+
+
+
+
+","Water,industry",Spirosoma escalantus,Spirosoma navajo,"Air,industry",Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Stigmatella auratiaca,Streptacidiphilus griseisporus Rodriguez et al.,Streptacidiphilus luteoalbus Rodríguez et al.,Streptomyces cattleya,Streptomyces cebimarensis Berlinck et al.,Streptomyces chungwhensis Lee et al.,Streptomyces garden Liping,Streptomyces ginsengisoli,Streptomyces ginsengisoli,Streptomyces halotolerans,Streptomyces himgriensis Singla et al.,Streptomyces hygroscopicus  subsp. enhygrus Dietz,Streptomyces mentougouensis,Streptomyces myrophorea,Streptomyces panaciterrae,Streptomyces phemorphus Li et al.,Streptomyces reticuli,,Streptomyces sannurensis Hozzein et al.,Streptosporangium aureofuscum Liping,Streptosporangium brasiliense Coronelli and Thiemann,Streptosporangium koreanum Routien,Streptosporangium kunmingense Liping,Streptosporangium rubrum Potekina,Streptosporangium vulgare  subsp. antibioticum Coronelli et al.,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Synechococcus rubescens,Thermoanaerobacter cellulolyticus Taya et al.,Thermoanaerobacter kreatinophilus,Thermoanaerobacterium islandicum,Thermoanaerobium crenophilum Krivenko et al.,Thermoanaerobium lactoethylicum Kondratieva et al.,Thermofilum librum,Trichotomospora caesia,,,,,,,,,,,,,,,,,An m14,An m23,An m9,,,,,,,,,,,,,,,,,,,,,,,,,,,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,unclassified bacterium,"
+BACTO MARINE BROTH (DIFCO 2216) (DSMZ Medium 514)
+",unclassified bacterium,unclassified bacterium,"
+R2A MEDIUM (DSMZ Medium 830)
+"
+9,"('Ref.: #23803', 'growth', '25')","('Ref.: #23804', 'growth', '25')","('Ref.: #12140', 'growth', '28')","('Ref.: #12203', 'growth', '28')","('Ref.: #12204', 'growth', '28')","('Ref.: #12202', 'growth', '28')","('Ref.: #22265', 'growth', '45')","('Ref.: #12242', 'growth', '37')","('Ref.: #12244', 'growth', '37')","('Ref.: #12245', 'growth', '37')","('Ref.: #12247', 'growth', '37')","('Ref.: #11622', 'growth', '28')","('Ref.: #12217', 'growth', '37')","('Ref.: #21464', 'growth', '28')","('Ref.: #2349', 'growth', '26')","('Ref.: #2347', 'growth', '26')","('Ref.: #20279', 'growth', '25-30')","('Ref.: #1232', 'growth', '37')","('Ref.: #65015', 'growth', '37')","('Ref.: #42777', 'growth', '23')","('Ref.: #4837', 'growth', '28')","('Ref.: #12301', 'growth', '28')",,,"('Ref.: #61757', 'growth', '37')","('Ref.: #512', 'growth', '28')","('Ref.: #651', 'growth', '30')","('Ref.: #658', 'growth', '30')","('Ref.: #1654', 'growth', '28')","('Ref.: #1655', 'growth', '28')","('Ref.: #1656', 'growth', '28')","('Ref.: #1701', 'growth', '28')","('Ref.: #2829', 'growth', '28')","('Ref.: #2830', 'growth', '28')","('Ref.: #2831', 'growth', '28')","('Ref.: #2832', 'growth', '28')","('Ref.: #2833', 'growth', '28')","('Ref.: #20323', 'growth', '28')","('Ref.: #20324', 'growth', '28')","('Ref.: #20325', 'growth', '28')","('Ref.: #20326', 'growth', '28')","('Ref.: #20327', 'growth', '28')","('Ref.: #20328', 'growth', '28')","('Ref.: #20329', 'growth', '28')","('Ref.: #20330', 'growth', '28')","('Ref.: #20331', 'growth', '28')","('Ref.: #20332', 'growth', '28')","('Ref.: #20333', 'growth', '28')","('Ref.: #20334', 'growth', '28')","('Ref.: #20335', 'growth', '28')",,,,,"('Ref.: #4845', 'growth', '55')","('Ref.: #22127', 'growth', '22')","('Ref.: #22444', 'growth', '60')","('Ref.: #5608', 'growth', '60')","('Ref.: #21267', 'growth', '25')","('Ref.: #21268', 'growth', '25')","('Ref.: #24460', 'growth', '45')","('Ref.: #43057', 'growth', '28')","('Ref.: #23874', 'growth', '60')","('Ref.: #12219', 'growth', '28')","('Ref.: #62107', 'growth', '37')","('Ref.: #11875', 'growth', '28')","('Ref.: #21880', 'growth', '37')",,"('Ref.: #22446', 'growth', '50')","('Ref.: #5780', 'growth', '35')",,"('Ref.: #22445', 'growth', '50')","('Ref.: #5757', 'growth', '37')","('Ref.: #3714', 'growth', '60')","('Ref.: #3715', 'growth', '60')","('Ref.: #42823', 'growth', '23')","('Ref.: #65131', 'growth', '23')","('Ref.: #65132', 'growth', '23')","('Ref.: #65133', 'growth', '23')","('Ref.: #2527', 'growth', '28')","('Ref.: #3466', 'growth', '18')","('Ref.: #17259', 'growth', '37')","('Ref.: #3444', 'growth', '30')","('Ref.: #3445', 'growth', '30')","('Ref.: #3446', 'growth', '30')","('Ref.: #12057', 'growth', '28')","('Ref.: #63598', 'growth', '30')","('Ref.: #42481', 'growth', '26')","('Ref.: #12052', 'growth', '28')","('Ref.: #11781', 'growth', '28')","('Ref.: #43040', 'growth', '28')","('Ref.: #22452', 'growth', '37')","('Ref.: #22418', 'growth', '37')","('Ref.: #60328', 'growth', '30')","('Ref.: #60720', 'growth', '30')","('Ref.: #63937', 'growth', '25')","('Ref.: #24648', 'growth', '28')","('Ref.: #24540', 'growth', '25')","('Ref.: #24542', 'growth', '28')","('Ref.: #64664', 'growth', '30')","('Ref.: #64665', 'growth', '28')","('Ref.: #24658', 'growth', '28')","('Ref.: #24675', 'growth', '28')","('Ref.: #21157', 'growth', '20')","('Ref.: #63199', 'growth', '30')","('Ref.: #11400', 'growth', '28')","('Ref.: #53297', 'growth', '30-37')","('Ref.: #62093', 'growth', '37')","('Ref.: #62092', 'growth', '37')",,"('Ref.: #11580', 'growth', '37')","('Ref.: #12019', 'growth', '28')","('Ref.: #14278', 'growth', '28')","('Ref.: #14288', 'growth', '28')","('Ref.: #14276', 'growth', '28')","('Ref.: #14275', 'growth', '28')","('Ref.: #14279', 'growth', '28')","('Ref.: #14277', 'growth', '28')","('Ref.: #14266', 'growth', '28')","('Ref.: #14264', 'growth', '28')","('Ref.: #14274', 'growth', '28')","('Ref.: #14270', 'growth', '28')","('Ref.: #14269', 'growth', '28')","('Ref.: #14268', 'growth', '28')","('Ref.: #14272', 'growth', '28')","('Ref.: #14271', 'growth', '28')","('Ref.: #14267', 'growth', '28')","('Ref.: #14263', 'growth', '28')","('Ref.: #12651', 'growth', '28')","('Ref.: #14301', 'growth', '28')","('Ref.: #14302', 'growth', '28')","('Ref.: #14303', 'growth', '28')","('Ref.: #14304', 'growth', '28')","('Ref.: #14305', 'growth', '28')","('Ref.: #14306', 'growth', '28')","('Ref.: #15313', 'growth', '28')","('Ref.: #15314', 'growth', '28')","('Ref.: #15315', 'growth', '28')","('Ref.: #15316', 'growth', '28')","('Ref.: #15318', 'growth', '28')","('Ref.: #15319', 'growth', '28')","('Ref.: #15320', 'growth', '28')","('Ref.: #15321', 'growth', '28')","('Ref.: #15322', 'growth', '28')","('Ref.: #15323', 'growth', '28')","('Ref.: #15324', 'growth', '28')","('Ref.: #15325', 'growth', '28')","('Ref.: #15326', 'growth', '28')","('Ref.: #15327', 'growth', '28')","('Ref.: #15328', 'growth', '28')","('Ref.: #15330', 'growth', '28')",,,,,,,,,,,,,,"('Ref.: #5425', 'growth', '30')","('Ref.: #14619', 'growth', '28')","('Ref.: #14620', 'growth', '28')","('Ref.: #14621', 'growth', '28')","('Ref.: #14622', 'growth', '28')","('Ref.: #14623', 'growth', '28')","('Ref.: #14624', 'growth', '28')","('Ref.: #14625', 'growth', '28')","('Ref.: #14627', 'growth', '28')","('Ref.: #14628', 'growth', '28')","('Ref.: #14629', 'growth', '28')","('Ref.: #14630', 'growth', '28')","('Ref.: #14631', 'growth', '28')","('Ref.: #14632', 'growth', '28')","('Ref.: #14633', 'growth', '28')","('Ref.: #14634', 'growth', '28')","('Ref.: #14635', 'growth', '28')","('Ref.: #14636', 'growth', '28')","('Ref.: #14637', 'growth', '28')","('Ref.: #14638', 'growth', '28')","('Ref.: #14639', 'growth', '28')","('Ref.: #14640', 'growth', '28')","('Ref.: #14641', 'growth', '28')","('Ref.: #14642', 'growth', '28')","('Ref.: #14643', 'growth', '28')","('Ref.: #14645', 'growth', '28')","('Ref.: #14646', 'growth', '28')","('Ref.: #14647', 'growth', '28')","('Ref.: #14648', 'growth', '28')","('Ref.: #14649', 'growth', '28')","('Ref.: #14650', 'growth', '28')","('Ref.: #14652', 'growth', '28')","('Ref.: #14653', 'growth', '28')","('Ref.: #14654', 'growth', '28')","('Ref.: #14655', 'growth', '28')","('Ref.: #14656', 'growth', '28')","('Ref.: #5427', 'growth', '30')","('Ref.: #14657', 'growth', '28')","('Ref.: #14658', 'growth', '28')","('Ref.: #14659', 'growth', '28')","('Ref.: #14660', 'growth', '28')","('Ref.: #14661', 'growth', '28')","('Ref.: #14662', 'growth', '28')","('Ref.: #14663', 'growth', '28')","('Ref.: #14664', 'growth', '28')","('Ref.: #14665', 'growth', '28')","('Ref.: #14666', 'growth', '28')","('Ref.: #14667', 'growth', '28')","('Ref.: #14668', 'growth', '28')","('Ref.: #14669', 'growth', '28')","('Ref.: #14670', 'growth', '28')","('Ref.: #14671', 'growth', '28')","('Ref.: #14672', 'growth', '28')","('Ref.: #14673', 'growth', '28')","('Ref.: #14674', 'growth', '28')","('Ref.: #14675', 'growth', '28')","('Ref.: #14676', 'growth', '28')","('Ref.: #14677', 'growth', '28')","('Ref.: #14678', 'growth', '28')","('Ref.: #14679', 'growth', '28')","('Ref.: #14680', 'growth', '28')","('Ref.: #14682', 'growth', '28')","('Ref.: #14683', 'growth', '28')","('Ref.: #14684', 'growth', '28')","('Ref.: #14685', 'growth', '28')","('Ref.: #14686', 'growth', '28')","('Ref.: #14687', 'growth', '28')","('Ref.: #14688', 'growth', '28')","('Ref.: #14689', 'growth', '28')","('Ref.: #14690', 'growth', '28')","('Ref.: #14691', 'growth', '28')","('Ref.: #5426', 'growth', '30')","('Ref.: #14818', 'growth', '28')","('Ref.: #14819', 'growth', '28')","('Ref.: #14820', 'growth', '28')","('Ref.: #14821', 'growth', '28')","('Ref.: #14822', 'growth', '28')","('Ref.: #14823', 'growth', '28')","('Ref.: #14824', 'growth', '28')","('Ref.: #14825', 'growth', '28')","('Ref.: #14826', 'growth', '28')","('Ref.: #14827', 'growth', '28')","('Ref.: #14828', 'growth', '28')","('Ref.: #14829', 'growth', '28')","('Ref.: #14830', 'growth', '28')","('Ref.: #14831', 'growth', '28')","('Ref.: #14836', 'growth', '28')","('Ref.: #5421', 'growth', '30')","('Ref.: #42507', 'growth', '30')","('Ref.: #12308', 'growth', '28')","('Ref.: #63945', 'growth', '25')","('Ref.: #12021', 'growth', '28')","('Ref.: #11931', 'growth', '28')","('Ref.: #12252', 'growth', '28')","('Ref.: #12251', 'growth', '28')","('Ref.: #12255', 'growth', '28')","('Ref.: #12256', 'growth', '28')","('Ref.: #12259', 'growth', '28')","('Ref.: #12250', 'growth', '28')","('Ref.: #12257', 'growth', '28')",,"('Ref.: #11813', 'growth', '28')","('Ref.: #11812', 'growth', '28')","('Ref.: #42824', 'growth', '18')","('Ref.: #42825', 'growth', '18')","('Ref.: #42826', 'growth', '18')","('Ref.: #62434', 'growth', '30')","('Ref.: #22420', 'growth', '28')","('Ref.: #20712', 'growth', '30')","('Ref.: #6512', 'growth', '37')","('Ref.: #24659', 'growth', '28')","('Ref.: #60548', 'growth', '30')","('Ref.: #60549', 'growth', '30')","('Ref.: #60551', 'growth', '30')","('Ref.: #24568', 'growth', '28')",,"('Ref.: #2156', 'growth', '28-30')","('Ref.: #61756', 'growth', '37')","('Ref.: #44653', 'growth', '25')","('Ref.: #44519', 'growth', '28')","('Ref.: #63563', 'growth', '30')","('Ref.: #52068', 'growth', '20-25')","('Ref.: #52070', 'growth', '20-25')","('Ref.: #52072', 'growth', '10-15')","('Ref.: #52073', 'growth', '20-25')","('Ref.: #64695', 'growth', '28')","('Ref.: #64691', 'growth', '55')","('Ref.: #24651', 'growth', '28')","('Ref.: #22441', 'growth', '30')","('Ref.: #22442', 'growth', '35')","('Ref.: #22443', 'growth', '28-35')","('Ref.: #42599', 'growth', '45')","('Ref.: #64692', 'growth', '25')","('Ref.: #64693', 'growth', '28')","('Ref.: #64694', 'growth', '28')","('Ref.: #7225', 'growth', '15')","('Ref.: #22611', 'growth', '28')","('Ref.: #22612', 'growth', '28')","('Ref.: #24570', 'growth', '20')","('Ref.: #10714', 'growth', '28')","('Ref.: #24657', 'growth', '28')","('Ref.: #24610', 'growth', '25')","('Ref.: #11746', 'growth', '28')","('Ref.: #21327', 'growth', '25')","('Ref.: #61675', 'growth', '30')","('Ref.: #59611', 'growth', '30')","('Ref.: #24612', 'growth', '30')","('Ref.: #24613', 'growth', '30')","('Ref.: #60946', 'growth', '37')",,,,,,,"('Ref.: #12028', 'growth', '28')","('Ref.: #12119', 'growth', '28')","('Ref.: #12578', 'growth', '28')","('Ref.: #10582', 'growth', '28')","('Ref.: #10625', 'growth', '28')","('Ref.: #10542', 'growth', '28')","('Ref.: #10532', 'growth', '28')","('Ref.: #10533', 'growth', '28')","('Ref.: #10632', 'growth', '28')","('Ref.: #10633', 'growth', '30')","('Ref.: #10447', 'growth', '28')","('Ref.: #10648', 'growth', '28')","('Ref.: #64989', 'growth', '28')","('Ref.: #10535', 'growth', '28')","('Ref.: #10615', 'growth', '28')","('Ref.: #23780', 'growth', '28')","('Ref.: #64075', 'growth', '23')","('Ref.: #10617', 'growth', '28')","('Ref.: #12262', 'growth', '28')","('Ref.: #11404', 'growth', '28')","('Ref.: #11405', 'growth', '28')","('Ref.: #12260', 'growth', '28')","('Ref.: #11480', 'growth', '28')","('Ref.: #11407', 'growth', '28')","('Ref.: #42779', 'growth', '23')","('Ref.: #42780', 'growth', '23')","('Ref.: #42781', 'growth', '23')","('Ref.: #42782', 'growth', '23')","('Ref.: #42783', 'growth', '23')","('Ref.: #64822', 'growth', '23')","('Ref.: #64823', 'growth', '23')","('Ref.: #64824', 'growth', '23')","('Ref.: #3455', 'growth', '65')","('Ref.: #5214', 'growth', '70')","('Ref.: #22447', 'growth', '60')","('Ref.: #3720', 'growth', '70')","('Ref.: #3458', 'growth', '65')","('Ref.: #739', 'growth', '85')","('Ref.: #11369', 'growth', '28')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #992', 'growth', '30')","('Ref.: #1433', 'growth', '15')","('Ref.: #1672', 'growth', '28')","('Ref.: #2272', 'growth', '28')","('Ref.: #2273', 'growth', '28')","('Ref.: #2337', 'growth', '35')","('Ref.: #3275', 'growth', '30')","('Ref.: #3792', 'growth', '30')","('Ref.: #3840', 'growth', '28')","('Ref.: #4269', 'growth', '30')","('Ref.: #4372', 'growth', '30')","('Ref.: #4675', 'growth', '25')","('Ref.: #4765', 'growth', '30')","('Ref.: #4767', 'growth', '30')","('Ref.: #4818', 'growth', '30')","('Ref.: #5361', 'growth', '30')","('Ref.: #6106', 'growth', '28')","('Ref.: #7203', 'growth', '28')","('Ref.: #20879', 'growth', '20')","('Ref.: #20901', 'growth', '20')","('Ref.: #20903', 'growth', '25')","('Ref.: #20904', 'growth', '28')","('Ref.: #21844', 'growth', '28')","('Ref.: #21845', 'growth', '40')","('Ref.: #21854', 'growth', '37')","('Ref.: #22262', 'growth', '28')","('Ref.: #22263', 'growth', '28')",,"('Ref.: #23807', 'growth', '28')","('Ref.: #23828', 'growth', '28')",,"('Ref.: #42362', 'growth', '25')","('Ref.: #64315', 'growth', '28')"
+10,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #34233', 'growth', '30')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #40477', 'growth', '37')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #18638', 'maximum', '30')","('Ref.: #18639', 'maximum', '30')","('Ref.: #18640', 'maximum', '30')","('Ref.: #18641', 'maximum', '30')","('Ref.: #18642', 'maximum', '30')","('Ref.: #18643', 'maximum', '30')","('Ref.: #18644', 'maximum', '30')","('Ref.: #18645', 'maximum', '30')","('Ref.: #18648', 'maximum', '30')","('Ref.: #18649', 'maximum', '30')","('Ref.: #18650', 'maximum', '30')","('Ref.: #18651', 'maximum', '30')","('Ref.: #18652', 'maximum', '30')","('Ref.: #18653', 'maximum', '30')","('Ref.: #18654', 'maximum', '30')","('Ref.: #18655', 'maximum', '30')","('Ref.: #18656', 'maximum', '30')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #52072', 'growth', '20-22')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #35994', 'growth', '30')",,,,,,,,"('Ref.: #40442', 'growth', '30')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #18638', 'minimum', '25')","('Ref.: #18639', 'minimum', '25')","('Ref.: #18640', 'minimum', '25')","('Ref.: #18641', 'minimum', '25')","('Ref.: #18642', 'minimum', '25')","('Ref.: #18643', 'minimum', '25')","('Ref.: #18644', 'minimum', '25')","('Ref.: #18645', 'minimum', '25')","('Ref.: #18648', 'minimum', '25')","('Ref.: #18649', 'minimum', '25')","('Ref.: #18650', 'minimum', '25')","('Ref.: #18651', 'minimum', '25')","('Ref.: #18652', 'minimum', '25')","('Ref.: #18653', 'minimum', '25')","('Ref.: #18654', 'minimum', '25')","('Ref.: #18655', 'minimum', '25')","('Ref.: #18656', 'minimum', '25')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"('Ref.: #18638', 'optimum', '28')","('Ref.: #18639', 'optimum', '28')","('Ref.: #18640', 'optimum', '28')","('Ref.: #18641', 'optimum', '28')","('Ref.: #18642', 'optimum', '28')","('Ref.: #18643', 'optimum', '28')","('Ref.: #18644', 'optimum', '28')","('Ref.: #18645', 'optimum', '28')","('Ref.: #18648', 'optimum', '28')","('Ref.: #18649', 'optimum', '28')","('Ref.: #18650', 'optimum', '28')","('Ref.: #18651', 'optimum', '28')","('Ref.: #18652', 'optimum', '28')","('Ref.: #18653', 'optimum', '28')","('Ref.: #18654', 'optimum', '28')","('Ref.: #18655', 'optimum', '28')","('Ref.: #18656', 'optimum', '28')",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
