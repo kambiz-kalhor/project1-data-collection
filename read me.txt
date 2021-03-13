@@ -1,4 +1,24 @@
 okay! here we are
-this is the main text file i will document what i am going to do
+this is the main text file i will document what i am going to do.
 
 
+project name:
+the final goal:
+number of stages: 2 (until now)
+
+
+
+-------------------------------------------  stage one  -------------------------------------------
+goal: downloding a table of species from BacDive including thier ID, link, isolation source, country, tag,  taxonomic data, optimum and growth temperature, the sequence(16s) and the description of sequence
+
+tools we used: python (pandas, re, beautiful soup, jupyter notebook, NCBI API)
+
+
+
+-------------------------------------------  stage two  -------------------------------------------
+goal:
+1- to extract other data like pH range and optimum pH from BacDive
+2- to mine some abstracts and collect additional pH data
+
+
+tools we used: python (pandas, re, beautiful soup, jupyter notebook, PubMed API, regex101, Debuggex, git, github, gitkraken)
