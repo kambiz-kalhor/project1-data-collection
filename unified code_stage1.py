@@ -12,9 +12,13 @@ import requests
 import re
 
 
-# # STEP ONE download a table from BacDive
+# # STEP ONE
 
-# i did it and the result is saved as stage1_step1_export_bacdive_iso_table before cleaning.csv
+# download a table from BacDive
+
+# i did it and the result is "saved as stage1_step1_export_bacdive_iso_table before cleaning.csv"
+
+# you can access it in git_hub repository
 
 # # STEP TWO
 
@@ -27,12 +31,6 @@ import re
 bacDive = pd.read_csv(r"C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv")
 
 
-# In[295]:
-
-
-bacDive
-
-
 # In[296]:
 
 
@@ -40,12 +38,6 @@ bacDive
 bacDive["Category 3"].fillna("#no", inplace = True)
 bacDive["Category 2"].fillna("#no", inplace = True)
 bacDive["Category 1"].fillna("#no", inplace = True) 
-
-
-# In[297]:
-
-
-bacDive
 
 
 # In[298]:
@@ -112,25 +104,15 @@ for i in temporary_list:
     bacDive = bacDive.drop([i])
 
 
-# In[311]:
-
-
-bacDive = bacDive[0:10]
-
-
 # # STEP THREE
 
 # WEB SCRAPING from BacDive
 
-# In[303]:
+# In[313]:
 
 
 # we want to creat URLs using the BacDive IDs
 all_IDs = bacDive['ID']
-
-#######################  reducing the size   this step must be removed  ###############
-all_IDs = all_IDs[0:10]
-######################################################################################
 
 
 # producing links for web scrapping
@@ -142,6 +124,8 @@ def get_ID_give_URL(ID):
     url = 'https://bacdive.dsmz.de/strain/' + str(ID)
     return url
 
+
+# reading html
 
 # In[305]:
 
@@ -158,6 +142,7 @@ def read_html(url):
 # In[306]:
 
 
+# my regex to extract temperature data from BacDive
 # in future i should improve this regex # its a regex to find temperature Data
 my_regex = re.compile("(Ref\.\:.\#\d+)\]\<\/a\>\<\/td\>\s\<td\>\<\/td\>\s\<td.class\=\"border\_rightfree\ textalign\_right\"\>\<\/td\>\s\<td.class\=\"border\_leftfree\"\>(\w+)\<\/td\>\s\<td.class\=\"border_leftfree textalign_center\"\>(\d{2}\-\d{2}|\d{2}\.\d{1}|\d{2})")
 
@@ -237,6 +222,10 @@ for counter in range (0,len(my_data_frame)):
 # give me an overview please
 print('until now, there are', str(len(list_no_temp_species_ID)) , 'species with no temperature data and you can see the list of IDs with no temp data in this: list_no_temp_species_ID')
 
+
+# # STEP FIVE
+
+# concat all the previous dataframes and producing an output
 
 # In[312]:
 
