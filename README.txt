@@ -39,10 +39,9 @@ future goals : the sequence(16s) and the description of sequence
 
 
 
-
-
--------------------------------------------  stage two  -------------------------------------------
-goal:
-1- to extract other data like pH range and optimum pH from BacDive
-2- to mine some abstracts and collect additional pH data
-
+#########################################################
+BUG REPORT:
+first bug: at the end of the second step   -------->  its because of BacDive database
+ i found a wired flaw in BacDive database : here in this code we remove the rows with the same species name , the result is
+ a dataframe with 8681 row. now if we remove the rows with the same ID, the result will be a dataframe with 18040 rows.
+ this means that there are some species with the same name but with different ID
