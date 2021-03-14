@@ -3,12 +3,12 @@
 
 # # for the dear user
 
-# In[141]:
+# In[172]:
 
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
 # for example  --->   r'C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv'
-input_path = r'C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv'
+input_path = r'C:\Users\kamy\Desktop\INPUT.csv'
 
 
 # and again please give me the output path to save the final result
@@ -32,6 +32,8 @@ from pymed import PubMed
 # download a table from BacDive
 
 # i did it and the result is "saved as stage1_step1_export_bacdive_iso_table before cleaning.csv"
+
+# this file is our input and we rename it as 'INPUT.CSV'
 
 # you can access it in git_hub repository
 
