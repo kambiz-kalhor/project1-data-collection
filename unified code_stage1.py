@@ -3,7 +3,7 @@
 
 # # for the dear user
 
-# In[20]:
+# In[1]:
 
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
@@ -17,7 +17,7 @@ output_path = r'C:\Users\kamy\Desktop\OUTPUT.csv'
 
 # # importing all the packages we need
 
-# In[21]:
+# In[2]:
 
 
 import pandas as pd
@@ -41,14 +41,14 @@ from pymed import PubMed
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
 
-# In[22]:
+# In[3]:
 
 
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
 bacDive = pd.read_csv(input_path)
 
 
-# In[23]:
+# In[4]:
 
 
 # filling the table # replacing NaN with no in three colums (Category 1, Category 2, Category 3)
@@ -57,7 +57,7 @@ bacDive["Category 2"].fillna("#no", inplace = True)
 bacDive["Category 1"].fillna("#no", inplace = True) 
 
 
-# In[24]:
+# In[5]:
 
 
 # the reason i used this code is to fill empty cells
@@ -79,7 +79,7 @@ for counter in range(0,x):
         #bacDive.iloc[counter+1,8] = bacDive.iloc[counter,8] +  bacDive.iloc[counter+1,8]
 
 
-# In[25]:
+# In[6]:
 
 
 ######## we wont need this if we are going to maintain other Tags in future
@@ -96,7 +96,7 @@ for counter in range(0,x):
     #bacDive = bacDive.drop([i])
 
 
-# In[26]:
+# In[7]:
 
 
 # now we have a dataframe whithout any tags other than #Environmental  but there are still some redundency, there are some rows with the same Species name
@@ -113,7 +113,7 @@ for counter in range(0,x):
         
 
 
-# In[27]:
+# In[8]:
 
 
 # and now we remove the duplicate row (consecutive duplicated rows only)
@@ -121,7 +121,7 @@ for i in temporary_list:
     bacDive = bacDive.drop([i])
 
 
-# In[30]:
+# In[9]:
 
 
 # removing the repeated species 
@@ -135,7 +135,7 @@ for i in bacDive.index:
         list_of_Indexes.append(i)
         
         
-#bacDive = bacDive.drop(list_of_Indexes)
+bacDive = bacDive.drop(list_of_Indexes)
 
 #################################################################
 # i found a wired flaw in BacDive database : here in this code we remove the rows with the same species name 
@@ -149,7 +149,7 @@ for i in bacDive.index:
 
 # WEB SCRAPING from BacDive
 
-# In[268]:
+# In[10]:
 
 
 # we want to creat URLs using the BacDive IDs
@@ -158,7 +158,7 @@ all_IDs = bacDive['ID']
 
 # producing links for web scrapping
 
-# In[269]:
+# In[11]:
 
 
 def get_ID_give_URL(ID):
@@ -168,7 +168,7 @@ def get_ID_give_URL(ID):
 
 # reading html
 
-# In[270]:
+# In[12]:
 
 
 def read_html(url):
@@ -180,7 +180,7 @@ def read_html(url):
 #CODE = 200 means the url is availible
 
 
-# In[271]:
+# In[13]:
 
 
 # my regex to extract temperature data from BacDive
@@ -193,7 +193,7 @@ x=str('(Ref\.\:.\#\d+)\]\<\/a\>\<\/td\>\\n\<td\>\<\/td\>\\n\<td\sclass=\"border\
 my_regex_pH = re.compile(x)
 
 
-# In[272]:
+# In[14]:
 
 
 my_data_frame = pd.DataFrame()
@@ -250,7 +250,7 @@ my_data_frame = my_data_frame.rename(columns={0: 'ID',  1: 'Last LPSN update', 2
 
 # another cleaning and filling step
 
-# In[273]:
+# In[15]:
 
 
 # fill the cells and replacing "NaN" with "#no"
@@ -270,7 +270,7 @@ my_data_frame["pH 5"].fillna("#no", inplace = True)
 my_data_frame["pH 6"].fillna("#no", inplace = True)
 
 
-# In[274]:
+# In[16]:
 
 
 #### in order to know the species with no temperature data  ####
@@ -290,7 +290,7 @@ print('until now, there are', str(len(list_no_temp_species_ID)) , 'species with 
 
 # concat all the previous dataframes and producing an output
 
-# In[275]:
+# In[17]:
 
 
 # making to dataframes look the same , so we can use concat()
@@ -312,7 +312,7 @@ result = pd.concat([bacDive, my_data_frame], axis=1)
 
 # creating queries to download the species
 
-# In[276]:
+# In[18]:
 
 
 list_of_species = result['Species']
@@ -324,7 +324,7 @@ list_of_IDs = list_of_IDs.iloc[:,1]
 
 # we dont need this step here
 
-# In[277]:
+# In[19]:
 
 
 # removing the repeated species  (no need)
@@ -338,7 +338,7 @@ list_of_IDs = list_of_IDs.iloc[:,1]
 
 # # our regexes to extract pH and optimum pH (bad regex)
 
-# In[278]:
+# In[20]:
 
 
 ######################################## regexes to find pH  #############################################################
@@ -421,7 +421,7 @@ bad_regexes = [regex1,regex2,regex3,regex4,regex5,regex6,regex7,regex8,regex9,re
 
 # # more advanced kind of regex
 
-# In[279]:
+# In[21]:
 
 
 general_regex_for_pH =r'(?: from | range |)(?:(?:(optimally)|(optimum)|(optimal)|(optima)|growth|(?#next step is because we dont want and/to/or before our pH))(?: |, | at |)pH(?:s|)(?: growth|)(?: (optimal)| (optimum)| (optima)|(?: |)\(\d.*?(?:C|c).*?\) ?|(?: |)\(\d.*?degrees.*?\) ?| range| ranged| |))(?:(?:(?: for.+?|)|(?: growth|)(?:| range(?:| for growth)| values))(?:(?: was| were| is| are)(?:.{0,30}?)|)(?:| of| at| approximately| around| between| from| ranging from)| of the medium was adjusted to)(?#from here its about digits)(?:(?: |\(| \()(?#here is the first pH)((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))(?:(?#here is the seperators)(?: |–|\-| to | and | or | and pH | or pH | to pH |\-pH )(?#here is the second pH)((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))|))(?#end of digits)(?#what comes after pH digits)(?:.{0,20}(optimum)(?#from here is the optimum that sometimes comes at the end of the main part, so from now the main sentence is finished)(?:(?#from here its about digits)(?:(?#here is the first pH)(?:.{0,10}?((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|)))(?:(?#here is the seperators)(?: |–|\-| to | and | or | and pH | or pH | to pH |\-pH )(?#here is the second pH)((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))|)))|)(?#end of digits)(?#what comes after pH digits)(?=(?:\)|,|;|:| |\.))(?![c|C|°|d|%]| [c|C|°|d|%]|  [c|C|°|d|%])'
@@ -432,7 +432,7 @@ advanced_regexes = [general_regex_for_pH, other_regexes]
 
 # # last resort regex for the missing data
 
-# In[280]:
+# In[22]:
 
 
 # this needs to be checked
@@ -443,7 +443,7 @@ last_regexes = [last_resort]
 
 # # my def
 
-# In[281]:
+# In[23]:
 
 
 # this def gets an species name and gives a string(query) which we can later use to search pubmed
@@ -456,7 +456,7 @@ def make_pubmed_advance_search_query(species_name):
     return (query)
 
 
-# In[282]:
+# In[24]:
 
 
 # this def gets a string(query include species name) and gives an abstract using pubmed API
@@ -495,7 +495,7 @@ def get_abstract_from_pubmed(query):
         
 
 
-# In[283]:
+# In[25]:
 
 
 # with this function I remove unicode characters
@@ -512,7 +512,7 @@ def get_abstract_make_changes(abstract):
     return(abstract)
 
 
-# In[284]:
+# In[26]:
 
 
 # this def gets an Abstract and gives an important sentence which includes pH
@@ -534,7 +534,7 @@ def find_sentence_with_pH_data(abstract):
         return (the_sentence_about_pH)
 
 
-# In[285]:
+# In[27]:
 
 
 # the final def to search for whatever information we want from a string
@@ -560,7 +560,7 @@ def get_sentence_give_pH_data(pH_sentence):
 
 # # assemble all the pervious codes
 
-# In[286]:
+# In[28]:
 
 
 #first tell me which regex do you want to use??
@@ -570,7 +570,7 @@ regexes = advanced_regexes
 #regexes = last_regexes
 
 
-# In[287]:
+# In[29]:
 
 
 #make a data frame for final storage
@@ -617,13 +617,13 @@ for i in range(0,len(list_of_species)):
 df.to_csv(r'C:\Users\kamy\Desktop\final_df.csv')
 
 
-# In[288]:
+# In[30]:
 
 
 print('hi! , using PubMed API we found' , len(list_of_species)-len(list_of_species_with_no_record) , 'species with some records and we extracted the data we need , but there is still ', str(len(list_of_species_with_no_record)) , 'species without any records')
 
 
-# In[289]:
+# In[31]:
 
 
 # putting all the data together
@@ -631,4 +631,10 @@ all_data_together = pd.concat([result, df], axis=1)
 ######################################################
 # save the output
 all_data_together.to_csv(output_path)
+
+
+# In[ ]:
+
+
+
 
