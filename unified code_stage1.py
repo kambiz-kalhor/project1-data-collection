@@ -441,9 +441,18 @@ last_resort =r'(?:(opti).{0,40}|)pH.{0,80}?(?:(optimally)|(optimum)|(optimal)|(o
 last_regexes = [last_resort]
 
 
-# # my def
+# # first regex for temperature data
 
 # In[23]:
+
+
+first_version = r'(?:(optimally)|(optimum)|(optimal)|(optima)|)(?:.{0,10})(\d\d|\d)(?:(?:(?:c|C|°|degrees)|.(?:c|C|°|degrees)|..(?:c|C|°|degrees))|)(?:(?: |–|\-| to | and | or | and pH | or temperature | to temperature |\-temperature )(\d\d|\d)|)(?:(?:c|C|°|degrees)| (?:c|C|°|degrees)|  (?:c|C|°|degrees))(?!%|.%|..%)'
+first_temperature_regex = [first_version]
+
+
+# # my def
+
+# In[24]:
 
 
 # this def gets an species name and gives a string(query) which we can later use to search pubmed
@@ -456,7 +465,7 @@ def make_pubmed_advance_search_query(species_name):
     return (query)
 
 
-# In[24]:
+# In[25]:
 
 
 # this def gets a string(query include species name) and gives an abstract using pubmed API
@@ -495,7 +504,7 @@ def get_abstract_from_pubmed(query):
         
 
 
-# In[25]:
+# In[26]:
 
 
 # with this function I remove unicode characters
@@ -503,16 +512,16 @@ def get_abstract_from_pubmed(query):
 
 def get_abstract_make_changes(abstract):
     abstract = abstract.replace("\u2009",' ')
-    abstract = abstract.replace.replace("&emsp14;",' ')
-    abstract = abstract.replace.replace("?",'-')
-    abstract = abstract.replace.replace("\n",' ')
-    abstract = abstract.replace.replace('\u200a',' ')
-    abstract = abstract.replace.replace('\xa0',' ')
-    abstract = abstract.replace+ '             '
+    abstract = abstract.replace("&emsp14;",' ')
+    abstract = abstract.replace("?",'-')
+    abstract = abstract.replace("\n",' ')
+    abstract = abstract.replace('\u200a',' ')
+    abstract = abstract.replace('\xa0',' ')
+    abstract = abstract.replace('°',' ')
     return(abstract)
 
 
-# In[26]:
+# In[27]:
 
 
 # this def gets an Abstract and gives an important sentence which includes pH
@@ -534,7 +543,29 @@ def find_sentence_with_pH_data(abstract):
         return (the_sentence_about_pH)
 
 
-# In[27]:
+# In[28]:
+
+
+# this def gets an Abstract and gives an important sentence which includes temperature
+# this step is not neccessary but i need it because i want to check the results using this sentences
+
+def find_sentence_with_temerature_data(abstract):
+    the_sentence_about_temerature = None
+    # a is where the temerature is located in the text
+    if 'temperature' in abstract:
+        a = abstract.index('temperature')
+        # here we selecte the surrounding text
+        s = abstract[a-300:a+300]
+        # spliting the right sentence
+        x = s.split(". ")
+        for i in range(0,len(x)):
+            if 'temperature' in x[i]:
+                the_sentence_about_temerature = x[i].replace('\u2009', ' ')  # this code removes a unicode problem
+
+        return (the_sentence_about_temerature)
+
+
+# In[29]:
 
 
 # the final def to search for whatever information we want from a string
@@ -542,6 +573,7 @@ def find_sentence_with_pH_data(abstract):
 # it gets the 'pH_sentence' and gives a list of what_regex_find
 
 def get_sentence_give_pH_data(pH_sentence):
+    regexes = regexes_pH
     pH_sentence = str(pH_sentence)    #I did this because of an error
     what_regex_found = []
     for regex in regexes:
@@ -558,23 +590,51 @@ def get_sentence_give_pH_data(pH_sentence):
 # the output is a list of what regex found
 
 
+# In[30]:
+
+
+# the final def to search for whatever information we want from a string
+# the string can be either temerature sentence or the complete abstract
+# it gets the 'the_sentence_about_temerature' and gives a list of what_regex_find
+
+def get_sentence_give_temperature_data(the_sentence_about_temerature):
+    regexes = regexes_temperature
+    the_sentence_about_temerature = str(the_sentence_about_temerature)    #I did this because of an error
+    what_regex_found = []
+    for regex in regexes:
+        
+        
+        what_is_found = re.findall(regex, the_sentence_about_temerature)
+        if what_is_found != []:
+            what_regex_found.append(what_is_found)
+        
+    return (what_regex_found)
+
+# this code needs a list of regexes
+# it gets a sentence as an imput
+# the output is a list of what regex found
+
+
 # # assemble all the pervious codes
 
-# In[28]:
+# In[31]:
 
 
 #first tell me which regex do you want to use??
 
-#regexes = bad_regexes
-regexes = advanced_regexes
-#regexes = last_regexes
+#regexes_pH = bad_regexes
+regexes_pH = advanced_regexes
+#regexes_pH = last_regexes
 
 
-# In[29]:
+regexes_temperature = first_temperature_regex
+
+
+# In[32]:
 
 
 #make a data frame for final storage
-df = pd.DataFrame(columns = ['ID', 'species_name' ,  'query' ,  'abstract' ,   'pH_sentence' , 'what_regexss_found'])
+df = pd.DataFrame(columns = ['ID', 'species_name' ,  'query' ,  'abstract' ,   'pH_sentence' , 'what_regexss_found_pH', 'the_sentence_about_temerature','what_regexss_found_temperature'])
 # this list help me to find specied with no record
 list_of_species_with_no_record = []
 
@@ -591,13 +651,17 @@ for i in range(0,len(list_of_species)):
     if abstract is None:                  #this occurs when there is no search result for a query
         list_of_species_with_no_record.append(species_name)
         pH_sentence = '---'
-        what_regexss_found = '---'
+        what_regexss_found_pH = '---'
+        what_regexss_found_temperature = '---'
         
 
     if abstract is not None:
         pH_sentence = find_sentence_with_pH_data(abstract)
+        the_sentence_about_temerature = find_sentence_with_temerature_data(abstract)
 
-        what_regexss_found = get_sentence_give_pH_data(pH_sentence)
+        what_regexss_found_pH = get_sentence_give_pH_data(pH_sentence)
+        
+        what_regexss_found_temperature = get_sentence_give_temperature_data(the_sentence_about_temerature)
 
 
 
@@ -605,8 +669,8 @@ for i in range(0,len(list_of_species)):
     #print (pH_sentence , ">>>>>>>>>>>>>>>" , what_regexss_found)
 
     #making lists and finally a dataframe
-    list_data = [ID, species_name , query , abstract , pH_sentence ,  what_regexss_found]
-    while len (list_data) != 6:
+    list_data = [ID, species_name , query , abstract , pH_sentence ,  what_regexss_found_pH,the_sentence_about_temerature, what_regexss_found_temperature]
+    while len (list_data) != 8:
         list_data.append(' ')
     #print(list_data)
 
@@ -617,13 +681,13 @@ for i in range(0,len(list_of_species)):
 df.to_csv(r'C:\Users\kamy\Desktop\final_df.csv')
 
 
-# In[30]:
+# In[33]:
 
 
 print('hi! , using PubMed API we found' , len(list_of_species)-len(list_of_species_with_no_record) , 'species with some records and we extracted the data we need , but there is still ', str(len(list_of_species_with_no_record)) , 'species without any records')
 
 
-# In[31]:
+# In[34]:
 
 
 # putting all the data together
@@ -631,6 +695,12 @@ all_data_together = pd.concat([result, df], axis=1)
 ######################################################
 # save the output
 all_data_together.to_csv(output_path)
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
