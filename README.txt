@@ -45,3 +45,10 @@ first bug: at the end of the second step   -------->  its because of BacDive dat
  i found a wired flaw in BacDive database : here in this code we remove the rows with the same species name , the result is
  a dataframe with 8681 row. now if we remove the rows with the same ID, the result will be a dataframe with 18040 rows.
  this means that there are some species with the same name but with different ID
+
+#########################################################
+TO DO LIST
+1-write a regex for salinity and temperature
+2-
+3-
+4-
