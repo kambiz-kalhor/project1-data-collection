@@ -48,7 +48,7 @@ first bug: at the end of the second step   -------->  its because of BacDive dat
 
 #########################################################
 TO DO LIST
-1-write a regex for salinity and temperature
+1-write a regex for salinity
 2-find the best way to deal with unicode problems
-3-
+3-add some details about my regex for better documentation using debuggex (I already added one example "view_temperature regex.PNG")
 4-
