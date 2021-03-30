@@ -3,8 +3,12 @@ this is the main text file i will document what i am going to do.
 you can read the details  in the powerpoint files located in each stage
 
 
-project name:
-the final goal:
+project name :
+
+the final goal : 
+
+supervisors : Dr. Andrew Steen, Dr. Donato Giovannelli
+
 number of steps: 6 (until now)
 tools we used: python (pandas, re, beautiful soup),  jupyter notebook, NCBI API, PubMed API, regex101, Debuggex, git, github, gitkraken
 
@@ -41,14 +45,18 @@ future goals : the sequence(16s) and the description of sequence
 
 #########################################################
 BUG REPORT:
-first bug: at the end of the second step   -------->  its because of BacDive database
- i found a wired flaw in BacDive database : here in this code we remove the rows with the same species name , the result is
+first bug: at the end of the second step   -------- >  its because of BacDive database
+ I found a wired flaw in BacDive database : here in this code we remove the rows with the same species name , the result is
  a dataframe with 8681 row. now if we remove the rows with the same ID, the result will be a dataframe with 18040 rows.
  this means that there are some species with the same name but with different ID
+
+Second bug: some wierd characters   -------- >  i dont know why they appear in text
+although i removed all aother characterz but they still  appear in the text
+characters like ------> Â
+i will solve this in my next meeting with my ml teacher.
 
 #########################################################
 TO DO LIST
 1-write a regex for salinity
-2-find the best way to deal with unicode problems
-3-add some details about my regex for better documentation using debuggex (I already added one example "view_temperature regex.PNG")
-4-
+2-add some details about my regex for better documentation using debuggex (I already added one example "view_temperature regex.PNG")
+3-
