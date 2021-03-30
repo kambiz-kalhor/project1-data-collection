@@ -3,7 +3,7 @@
 
 # # for the dear user
 
-# In[68]:
+# In[1]:
 
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
@@ -652,6 +652,7 @@ for i in range(0,len(list_of_species)):
         list_of_species_with_no_record.append(species_name)
         pH_sentence = '---'
         what_regexss_found_pH = '---'
+        the_sentence_about_temerature = '---'
         what_regexss_found_temperature = '---'
         
 
