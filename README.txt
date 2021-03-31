@@ -42,6 +42,10 @@ goal: finding out what are the availible seq data  -----> searching BacDive
 
 
 
+-------------------------------------------  step eight  -------------------------------------------
+goal: adding seq data  -----> from BacDive
+
+
  
 ##########################################################
 future goals : 

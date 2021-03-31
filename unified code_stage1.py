@@ -3,7 +3,7 @@
 
 # # for the dear user
 
-# In[31]:
+# In[2]:
 
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
@@ -20,14 +20,22 @@ second_output = r"C:\Users\kamy\Desktop\all_availible_seq_in_Bacdive.csv"
 
 # # importing all the packages we need
 
-# In[18]:
+# In[34]:
 
 
+# main packages
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 import re
+
+# using PubMed API
 from pymed import PubMed
+
+# using NCBI API
+from Bio import Entrez
+from Bio import SeqIO
+Entrez.email = 'kz.kalhor@gmail.com'
 
 
 # # STEP ONE
@@ -714,7 +722,7 @@ all_data_together.to_csv(output_path)
 
 # what are the availible seq data according to BacDive????
 
-# In[8]:
+# In[24]:
 
 
 ####this part of code will be removed
@@ -724,7 +732,7 @@ output_path = r'C:\Users\kamy\Desktop\OUTPUT.csv'
 all_data_together = pd.read_csv(output_path)
 
 
-# In[15]:
+# In[25]:
 
 
 #making some links to extract all availible data from BacDive
@@ -736,7 +744,7 @@ for i in all_data_together['ID']:
     links_list.append(link)
 
 
-# In[20]:
+# In[40]:
 
 
 # extracting from BacDive
@@ -776,21 +784,92 @@ for url in all_urls:
 
     my_data_frame[COUNTER] = pd.Series(listm)
     
-    my_data_frame = my_data_frame.T
+my_data_frame = my_data_frame.T
 
-    my_data_frame.to_csv(second_output)
-
-
-# In[22]:
+my_data_frame.to_csv(second_output)
 
 
+# In[45]:
 
+
+my_data_frame
+
+
+# # STEP EIGHT
+
+# we are going to extract some seq data (here we search for 16S seq)
+
+# In[49]:
+
+
+# Now we extract all the 16S accession numbers and a list of links
+
+links_list = all_urls
+list_of_accession_numbers = []
+
+# we use this code to search all the cells with desired word(here we search for 16S)
+
+length_of_a_row_in_my_data_frame = 20
+for i in range (0,len(my_data_frame)):
+    for j in range(0,length_of_a_row_in_my_data_frame):
+        the_cell = str(my_data_frame.iloc[i,j])
+        if "16S" in the_cell:
+            list_of_accession_numbers.append(my_data_frame.iloc[i,j+1])    # wherever the 16S is, the next cell would be accession number we need
+            
+
+
+# In[50]:
+
+
+len(list_of_accession_numbers)
+
+
+# In[51]:
+
+
+len(links_list)
+
+
+# In[63]:
+
+
+list_of_accession_numbers
 
 
 # In[ ]:
 
 
 
+
+
+# # now its time to extract the subsequent sequence data using their accession numbers
+
+# In[56]:
+
+
+erorrs = []
+list_id = []
+list_seq =[]
+list_description =[]
+for i in list_of_accession_numbers:
+    try:
+        handle = Entrez.efetch(db = "nucleotide", id = i, rettype = "fasta")
+        record = SeqIO.read( handle, "fasta" )
+        list_id.append(record.id)
+        list_description.append(record.description)
+        list_seq.append(record.seq)
+        
+    except:
+        erorrs.append(i)
+    list_of_tuples = list(zip(list_of_accession_numbers, list_description, list_seq))
+    df = pd.DataFrame(list_of_tuples,columns = ['accession number', "description",'sequence'])
+    df.to_csv(r"C:\Users\kamy\Desktop\16S_seq.csv")
+
+
+# In[62]:
+
+
+list_seq
 
 
 # In[ ]:
