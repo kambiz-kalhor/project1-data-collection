@@ -1,5 +1,5 @@
 okay! here we are
-this is the main text file i will document what i am going to do.
+Here, I will document what i have done so far and what i am going to do.
 you can read the details  in the powerpoint files located in each stage
 
 
@@ -39,21 +39,22 @@ goal: data mining from PubMed, using regexes to extract data from some abstracts
 
  
 ##########################################################
-future goals : the sequence(16s) and the description of sequence
-
+future goals : 
+1-adding the sequence(16s) and the description of sequence
+2-
 
 
 #########################################################
 BUG REPORT:
 first bug: at the end of the second step   -------- >  its because of BacDive database
- I found a wired flaw in BacDive database : here in this code we remove the rows with the same species name , the result is
+ I found a flaw in BacDive database : here in this code we remove the rows with the same species name , the result is
  a dataframe with 8681 row. now if we remove the rows with the same ID, the result will be a dataframe with 18040 rows.
  this means that there are some species with the same name but with different ID
 
 Second bug: some wierd characters   -------- >  i dont know why they appear in text
-although i removed all aother characterz but they still  appear in the text
+although i removed all aother characters but they still  appear in the text
 characters like ------> Â
-i will solve this in my next meeting with my ml teacher.
+i will solve this in my next meeting with my programming teacher.
 
 #########################################################
 TO DO LIST
