@@ -3,7 +3,7 @@
 
 # # for the dear user
 
-# In[15]:
+# In[31]:
 
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
@@ -14,10 +14,13 @@ input_path = r'C:\Users\kamy\Desktop\INPUT.csv'
 # and again please give me the output path to save the final result
 output_path = r'C:\Users\kamy\Desktop\OUTPUT.csv'
 
+# this is another output which includes all_availible_seq_in_Bacdive
+second_output = r"C:\Users\kamy\Desktop\all_availible_seq_in_Bacdive.csv"
+
 
 # # importing all the packages we need
 
-# In[16]:
+# In[18]:
 
 
 import pandas as pd
@@ -702,6 +705,83 @@ all_data_together.to_csv(output_path)
 
 
 # In[ ]:
+
+
+
+
+
+# # STEP SEVEN
+
+# what are the availible seq data according to BacDive????
+
+# In[8]:
+
+
+####this part of code will be removed
+output_path = r'C:\Users\kamy\Desktop\OUTPUT.csv'
+####
+
+all_data_together = pd.read_csv(output_path)
+
+
+# In[15]:
+
+
+#making some links to extract all availible data from BacDive
+
+link_part_one = r'https://bacdive.dsmz.de/strain/'
+links_list = []
+for i in all_data_together['ID']:
+    link = link_part_one + str(i)
+    links_list.append(link)
+
+
+# In[20]:
+
+
+# extracting from BacDive
+
+all_urls = links_list
+
+def read_html(url):
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        return response.text
+    return None
+    #CODE = 200 means the url is availible
+
+
+
+my_data_frame = pd.DataFrame()
+COUNTER = 0
+for url in all_urls:
+    COUNTER = COUNTER +1
+    html_doc = read_html(url)
+    if html_doc is None:
+        print("Something went wrong!!!  the following url seems to be wrong   ; " , url)
+    soup = BeautifulSoup(html_doc, "lxml")
+
+
+    listm = [url]
+
+    #first step ==> extracting seq data
+    tag = "valigntop border padding"
+    data = soup.find_all("td", class_= tag)
+    for td in data:
+        listm.append(td.text)
+        if len(listm) == 100:
+            break
+
+
+    my_data_frame[COUNTER] = pd.Series(listm)
+    
+    my_data_frame = my_data_frame.T
+
+    my_data_frame.to_csv(second_output)
+
+
+# In[22]:
 
 
 

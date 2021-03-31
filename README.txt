@@ -37,6 +37,11 @@ goal: concat all the previous dataframes and producing an output
 goal: data mining from PubMed, using regexes to extract data from some abstracts
 
 
+-------------------------------------------  step seven  -------------------------------------------
+goal: finding out what are the availible seq data  -----> searching BacDive
+
+
+
  
 ##########################################################
 future goals : 
