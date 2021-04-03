@@ -20,7 +20,7 @@ second_output = r"C:\Users\kamy\Desktop\all_availible_seq_in_Bacdive.csv"
 
 # # importing all the packages we need
 
-# In[34]:
+# In[3]:
 
 
 # main packages
@@ -722,17 +722,13 @@ all_data_together.to_csv(output_path)
 
 # what are the availible seq data according to BacDive????
 
-# In[24]:
+# In[12]:
 
 
-####this part of code will be removed
-output_path = r'C:\Users\kamy\Desktop\OUTPUT.csv'
-####
-
-all_data_together = pd.read_csv(output_path)
+all_data_together = pd.read_csv(r'C:\Users\kamy\Desktop\OUTPUT.csv')
 
 
-# In[25]:
+# In[15]:
 
 
 #making some links to extract all availible data from BacDive
@@ -744,7 +740,7 @@ for i in all_data_together['ID']:
     links_list.append(link)
 
 
-# In[40]:
+# In[16]:
 
 
 # extracting from BacDive
@@ -778,73 +774,91 @@ for url in all_urls:
     data = soup.find_all("td", class_= tag)
     for td in data:
         listm.append(td.text)
-        if len(listm) == 100:
-            break
+    # some of the lists contains more than 20 availible seq
+    ########################### THIS IS MY HYPER-PARAMETER ##############################
+    maximum_lenght_list = 200
+    while len(listm) < maximum_lenght_list:
+        listm.append('')
 
 
     my_data_frame[COUNTER] = pd.Series(listm)
     
+
 my_data_frame = my_data_frame.T
 
-my_data_frame.to_csv(second_output)
+#my_data_frame.to_csv(r"C:\Users\kamy\Desktop\1.csv")
 
 
-# In[45]:
+# # cleaning the data
+
+# In[39]:
 
 
-my_data_frame
+# this code seperates the sequence colums
+
+null = ''
+df = pd.DataFrame()
+
+
+for i in range(0,len(my_data_frame)):
+    this_row = []
+    for j in range (0, maximum_lenght_list):
+        
+        if "tax ID" not in str(my_data_frame.iloc[i][j]):
+            this_row.append(my_data_frame.iloc[i][j])
+            
+        if "tax ID" in str(my_data_frame.iloc[i][j]):
+            while len(this_row)%6 != 0:
+                this_row.append(null)
+            this_row.append(my_data_frame.iloc[i][j])
+
+        
+        
+########################### THIS IS MY HYPER-PARAMETER ##############################
+    maximum_lenght_this_row = 400
+    while len(this_row) != maximum_lenght_this_row:
+        this_row.append(null)
+     
+    df[i] = pd.Series(this_row)
+            
+df = df.T
+
+
+# this code relocate the tax data
+for i in range(0,len(df)):
+    for j in range (0,maximum_lenght_this_row):
+        if 'tax' in str(df.iloc[i][j]):
+            df.iloc[i][j-1] = df.iloc[i][j]
+            df.iloc[i][j] = ''
+                    
+                    
+df.to_csv(r"C:\Users\kamy\Desktop\3.csv")       
 
 
 # # STEP EIGHT
 
-# we are going to extract some seq data (here we search for 16S seq)
-
-# In[49]:
+# In[77]:
 
 
-# Now we extract all the 16S accession numbers and a list of links
-
-links_list = all_urls
 list_of_accession_numbers = []
+for counter in range (2,300,6):
+    column_of_accessions_in_df = df[counter]
 
-# we use this code to search all the cells with desired word(here we search for 16S)
-
-length_of_a_row_in_my_data_frame = 20
-for i in range (0,len(my_data_frame)):
-    for j in range(0,length_of_a_row_in_my_data_frame):
-        the_cell = str(my_data_frame.iloc[i,j])
-        if "16S" in the_cell:
-            list_of_accession_numbers.append(my_data_frame.iloc[i,j+1])    # wherever the 16S is, the next cell would be accession number we need
-            
+    for accession_number in column_of_accessions_in_df:
+        if accession_number != '':
+            list_of_accession_numbers.append(accession_number)
+    
 
 
-# In[50]:
+# In[130]:
 
 
 len(list_of_accession_numbers)
 
 
-# In[51]:
+# now its time to extract the subsequent sequence data using their accession numbers
 
-
-len(links_list)
-
-
-# In[63]:
-
-
-list_of_accession_numbers
-
-
-# In[ ]:
-
-
-
-
-
-# # now its time to extract the subsequent sequence data using their accession numbers
-
-# In[56]:
+# In[117]:
 
 
 erorrs = []
@@ -853,7 +867,8 @@ list_seq =[]
 list_description =[]
 for i in list_of_accession_numbers:
     try:
-        handle = Entrez.efetch(db = "nucleotide", id = i, rettype = "fasta")
+        #handle = Entrez.efetch(db = "nucleotide", id = i, rettype = "fasta")
+        handle = Entrez.efetch(db = "ALL", id = i, rettype = "fasta")
         record = SeqIO.read( handle, "fasta" )
         list_id.append(record.id)
         list_description.append(record.description)
@@ -864,16 +879,4 @@ for i in list_of_accession_numbers:
     list_of_tuples = list(zip(list_of_accession_numbers, list_description, list_seq))
     df = pd.DataFrame(list_of_tuples,columns = ['accession number', "description",'sequence'])
     df.to_csv(r"C:\Users\kamy\Desktop\16S_seq.csv")
-
-
-# In[62]:
-
-
-list_seq
-
-
-# In[ ]:
-
-
-
 

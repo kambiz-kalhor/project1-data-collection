@@ -44,13 +44,20 @@ goal: finding out what are the availible seq data  -----> searching BacDive
 
 -------------------------------------------  step eight  -------------------------------------------
 goal: adding seq data  -----> from BacDive
+here we have some problems:
+1- we can only use biopython to download from nucleoutide database and we can not use assembly database (this problem is my focous right now)
 
 
  
 ##########################################################
 future goals : 
-1-adding the sequence(16s) and the description of sequence
-2-
+For every organism possible
+
+Add 16S sequence from the strain in BacDive -----> mostly done
+[] Add genome from the strain in BacDive
+[] Add 16S and/or genome sequence from other sources (e.g. RefSeq, IMG/M, SRA, ENA) for precisely the same organism
+[] Add genome sequence for different organisms having the identical 16S sequence to organisms in BacDive
+
 
 
 #########################################################
