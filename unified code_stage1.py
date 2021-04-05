@@ -3,7 +3,7 @@
 
 # # for the dear user
 
-# In[2]:
+# In[1]:
 
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
@@ -20,7 +20,7 @@ second_output = r"C:\Users\kamy\Desktop\all_availible_seq_in_Bacdive.csv"
 
 # # importing all the packages we need
 
-# In[3]:
+# In[2]:
 
 
 # main packages
@@ -722,13 +722,13 @@ all_data_together.to_csv(output_path)
 
 # what are the availible seq data according to BacDive????
 
-# In[12]:
+# In[57]:
 
 
 all_data_together = pd.read_csv(r'C:\Users\kamy\Desktop\OUTPUT.csv')
 
 
-# In[15]:
+# In[58]:
 
 
 #making some links to extract all availible data from BacDive
@@ -740,7 +740,7 @@ for i in all_data_together['ID']:
     links_list.append(link)
 
 
-# In[16]:
+# In[59]:
 
 
 # extracting from BacDive
@@ -776,7 +776,7 @@ for url in all_urls:
         listm.append(td.text)
     # some of the lists contains more than 20 availible seq
     ########################### THIS IS MY HYPER-PARAMETER ##############################
-    maximum_lenght_list = 200
+    maximum_lenght_list = 300
     while len(listm) < maximum_lenght_list:
         listm.append('')
 
@@ -786,12 +786,12 @@ for url in all_urls:
 
 my_data_frame = my_data_frame.T
 
-#my_data_frame.to_csv(r"C:\Users\kamy\Desktop\1.csv")
+#my_data_frame.to_csv(r"C:\Users\kamy\Desktop\all_availible_seq_not_clean.csv")
 
 
-# # cleaning the data
+# cleaning the data
 
-# In[39]:
+# In[60]:
 
 
 # this code seperates the sequence colums
@@ -808,7 +808,7 @@ for i in range(0,len(my_data_frame)):
             this_row.append(my_data_frame.iloc[i][j])
             
         if "tax ID" in str(my_data_frame.iloc[i][j]):
-            while len(this_row)%6 != 0:
+            while len(this_row)%7 != 0:
                 this_row.append(null)
             this_row.append(my_data_frame.iloc[i][j])
 
@@ -828,20 +828,20 @@ df = df.T
 for i in range(0,len(df)):
     for j in range (0,maximum_lenght_this_row):
         if 'tax' in str(df.iloc[i][j]):
-            df.iloc[i][j-1] = df.iloc[i][j]
+            df.iloc[i][j-2] = df.iloc[i][j]
             df.iloc[i][j] = ''
                     
                     
-df.to_csv(r"C:\Users\kamy\Desktop\3.csv")       
+#df.to_csv(r"C:\Users\kamy\Desktop\all_availible_seq_clean.csv")       
 
 
 # # STEP EIGHT
 
-# In[77]:
+# In[61]:
 
 
 list_of_accession_numbers = []
-for counter in range (2,300,6):
+for counter in range (2,300,7):
     column_of_accessions_in_df = df[counter]
 
     for accession_number in column_of_accessions_in_df:
@@ -850,15 +850,21 @@ for counter in range (2,300,6):
     
 
 
-# In[130]:
+# In[62]:
 
 
 len(list_of_accession_numbers)
 
 
+# In[63]:
+
+
+list_of_accession_numbers
+
+
 # now its time to extract the subsequent sequence data using their accession numbers
 
-# In[117]:
+# In[64]:
 
 
 erorrs = []
@@ -867,8 +873,7 @@ list_seq =[]
 list_description =[]
 for i in list_of_accession_numbers:
     try:
-        #handle = Entrez.efetch(db = "nucleotide", id = i, rettype = "fasta")
-        handle = Entrez.efetch(db = "ALL", id = i, rettype = "fasta")
+        handle = Entrez.efetch(db = "nucleotide", id = i, rettype = "fasta")
         record = SeqIO.read( handle, "fasta" )
         list_id.append(record.id)
         list_description.append(record.description)
@@ -876,7 +881,35 @@ for i in list_of_accession_numbers:
         
     except:
         erorrs.append(i)
-    list_of_tuples = list(zip(list_of_accession_numbers, list_description, list_seq))
-    df = pd.DataFrame(list_of_tuples,columns = ['accession number', "description",'sequence'])
-    df.to_csv(r"C:\Users\kamy\Desktop\16S_seq.csv")
+        
+list_of_tuples = list(zip(list_description, list_seq))
+df_seq = pd.DataFrame(list_of_tuples,columns = ["description",'sequence'])
+df_seq.to_csv(r"C:\Users\kamy\Desktop\16S_seq.csv")
+
+
+# In[65]:
+
+
+df_seq["description"]
+
+
+# In[66]:
+
+
+for row in range(0,len(df)):
+    for counter in range (2,300,7):
+        cell_of_accessions_in_df = df.iloc[row][counter]
+        for second_counter in range (0,len(df_seq)):
+            if cell_of_accessions_in_df in df_seq["description"][second_counter]:
+                df.iloc[row][counter+4] = df_seq["description"][second_counter]
+                df.iloc[row][counter+5] = df_seq["sequence"][second_counter]
+
+                
+df.to_csv(r"C:\Users\kamy\Desktop\all_seq.csv")
+
+
+# In[ ]:
+
+
+
 
