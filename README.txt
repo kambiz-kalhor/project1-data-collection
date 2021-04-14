@@ -46,8 +46,9 @@ goal: finding out what are the availible seq data  -----> searching BacDive
 goal: adding seq data  -----> from BacDive
 here we have some problems:
 1- we can only use biopython to download from nucleoutide database and we can not use assembly database (this problem is my focous right now)
-
-
+two parts:
+1-  seq from nuecleotide
+2- seq from essembly
  
 ##########################################################
 future goals : 
