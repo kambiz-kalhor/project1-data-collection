@@ -1,33 +1,56 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # for the dear user
-
-# In[1]:
-
+"""
+####    ##    ##    ########     ##     ##    ########     ######       ####        #######     ##     ##    ########    ########     ##     ##    ########     ######
+ ##     ###   ##    ##     ##    ##     ##       ##       ##    ##     ##  ##      ##     ##    ##     ##       ##       ##     ##    ##     ##       ##       ##    ##
+ ##     ####  ##    ##     ##    ##     ##       ##       ##            ####       ##     ##    ##     ##       ##       ##     ##    ##     ##       ##       ##
+ ##     ## ## ##    ########     ##     ##       ##        ######      ####        ##     ##    ##     ##       ##       ########     ##     ##       ##        ######
+ ##     ##  ####    ##           ##     ##       ##             ##    ##  ## ##    ##     ##    ##     ##       ##       ##           ##     ##       ##             ##
+ ##     ##   ###    ##           ##     ##       ##       ##    ##    ##   ##      ##     ##    ##     ##       ##       ##           ##     ##       ##       ##    ##
+####    ##    ##    ##            #######        ##        ######      ####  ##     #######      #######        ##       ##            #######        ##        ######
+ 
+(font banner 3)
+"""
+## for the dear user
 
 # please give me the string of path for the file "stage1_step1_export_bacdive_iso_table before cleaning.csv"
 # for example  --->   r'C:\Users\kamy\Desktop\stage1_step1_export_bacdive_iso_table before cleaning.csv'
-input_path = r'C:\Users\kamy\Desktop\INPUT.csv'
-
+input_path = r'Data_collection_project/TEST_INPUT.csv'
 
 # and again please give me the output path to save the final result
-output_path = r'C:\Users\kamy\Desktop\OUTPUT.csv'
+output_path = r'Data_collection_project/TEST_OUTPUT.csv'
 
 # this is another output which includes all_availible_seq_in_Bacdive
-second_output = r"C:\Users\kamy\Desktop\all_availible_seq_in_Bacdive.csv"
+#second_output = r"all_availible_seq_in_Bacdive.csv"
+
+print('getting inputs and outputs......................')
+
+"""
+####    ##     ##    ########      #######     ########     ########    ####    ##    ##     ######
+ ##     ###   ###    ##     ##    ##     ##    ##     ##       ##        ##     ###   ##    ##    ##
+ ##     #### ####    ##     ##    ##     ##    ##     ##       ##        ##     ####  ##    ##
+ ##     ## ### ##    ########     ##     ##    ########        ##        ##     ## ## ##    ##   ####
+ ##     ##     ##    ##           ##     ##    ##   ##         ##        ##     ##  ####    ##    ##
+ ##     ##     ##    ##           ##     ##    ##    ##        ##        ##     ##   ###    ##    ##
+####    ##     ##    ##            #######     ##     ##       ##       ####    ##    ##     ######
 
 
-# # importing all the packages we need
+########        ###        ######     ##    ##       ###        ######      ########     ######
+##     ##      ## ##      ##    ##    ##   ##       ## ##      ##    ##     ##          ##    ##
+##     ##     ##   ##     ##          ##  ##       ##   ##     ##           ##          ##
+########     ##     ##    ##          #####       ##     ##    ##   ####    ######       ######
+##           #########    ##          ##  ##      #########    ##    ##     ##                ##
+##           ##     ##    ##    ##    ##   ##     ##     ##    ##    ##     ##          ##    ##
+##           ##     ##     ######     ##    ##    ##     ##     ######      ########     ######
 
-# In[2]:
+(font banner 3)
+"""
 
-
+print('importing packages.............................')
 # main packages
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 import re
+import time
 
 # using PubMed API
 from pymed import PubMed
@@ -35,31 +58,47 @@ from pymed import PubMed
 # using NCBI API
 from Bio import Entrez
 from Bio import SeqIO
-Entrez.email = 'kz.kalhor@gmail.com'
+Entrez.email = 'kalhor.kz@gmail.com'
+
+######################
+#  estimating time   #
+start = time.time()  #
+#                    #
+######################
 
 
-# # STEP ONE
+"""
+ ######     ########    ########    ########               #######     ##    ##    ########
+##    ##       ##       ##          ##     ##             ##     ##    ###   ##    ##
+##             ##       ##          ##     ##             ##     ##    ####  ##    ##
+ ######        ##       ######      ########              ##     ##    ## ## ##    ######
+      ##       ##       ##          ##                    ##     ##    ##  ####    ##
+##    ##       ##       ##          ##                    ##     ##    ##   ###    ##
+ ######        ##       ########    ##                     #######     ##    ##    ########
 
+(font banner 3)
+"""
+# **** goal: downloding a table of species from BacDive including thier ID, link, isolation source, country, tag
 # download a table from BacDive
-
 # i did it and the result is "saved as stage1_step1_export_bacdive_iso_table before cleaning.csv"
-
 # this file is our input and we rename it as 'INPUT.CSV'
-
 # you can access it in git_hub repository
 
-# # STEP TWO
+"""
+ ######     ########    ########    ########           ########    ##      ##     #######
+##    ##       ##       ##          ##     ##             ##       ##  ##  ##    ##     ##
+##             ##       ##          ##     ##             ##       ##  ##  ##    ##     ##
+ ######        ##       ######      ########              ##       ##  ##  ##    ##     ##
+      ##       ##       ##          ##                    ##       ##  ##  ##    ##     ##
+##    ##       ##       ##          ##                    ##       ##  ##  ##    ##     ##
+ ######        ##       ########    ##                    ##        ###  ###      #######
 
-# read stage1_step1_export_bacdive_iso_table before cleaning.csv
-
-# In[17]:
-
-
+(font banner 3)
+"""
+print('step two cleaning the data.............................')
+# **** goal: cleaning the dataframe we have,  filling empty cells, get rid of redundencies, removing the duplicate rows
 # read stage1_step1_export_bacdive_iso_table before cleaning.csv
 bacDive = pd.read_csv(input_path)
-
-
-# In[18]:
 
 
 # filling the table # replacing NaN with no in three colums (Category 1, Category 2, Category 3)
@@ -67,13 +106,8 @@ bacDive["Category 3"].fillna("#no", inplace = True)
 bacDive["Category 2"].fillna("#no", inplace = True)
 bacDive["Category 1"].fillna("#no", inplace = True) 
 
-
-# In[19]:
-
-
 # the reason i used this code is to fill empty cells
 # this code means --> check the IDs, if the ID of two consecutive rows are the same than fill the second row with the cells of first row
-
 temporary_list =[]
 x = len(bacDive['ID'])-1
 for counter in range(0,x):
@@ -89,10 +123,7 @@ for counter in range(0,x):
         #bacDive.iloc[counter+1,7] = bacDive.iloc[counter,7] +  bacDive.iloc[counter+1,7]
         #bacDive.iloc[counter+1,8] = bacDive.iloc[counter,8] +  bacDive.iloc[counter+1,8]
 
-
-# In[20]:
-
-
+##################################################################################################
 ######## we wont need this if we are going to maintain other Tags in future
 ######## this code is written to remove all the rows without a specific Tag(here : #Environmental)
 
@@ -106,11 +137,9 @@ for counter in range(0,x):
 #for i in temporary_list:
     #bacDive = bacDive.drop([i])
 
-
-# In[21]:
-
-
-# now we have a dataframe whithout any tags other than #Environmental  but there are still some redundency, there are some rows with the same Species name
+###################################################################################################
+# now we have a dataframe whithout any tags other than #Environmental  but there are still some -
+# redundency, there are some rows with the same Species name
 # here the goal is to merge rows with the same Species name
 
 
@@ -121,18 +150,11 @@ for counter in range(0,x):
         temporary_list.append(counter)
         bacDive.iloc[counter+1,7] = bacDive.iloc[counter,7] +  bacDive.iloc[counter+1,7]
         bacDive.iloc[counter+1,8] = bacDive.iloc[counter,8] +  bacDive.iloc[counter+1,8]
-        
-
-
-# In[22]:
 
 
 # and now we remove the duplicate row (consecutive duplicated rows only)
 for i in temporary_list:
     bacDive = bacDive.drop([i])
-
-
-# In[23]:
 
 
 # removing the repeated species 
@@ -148,6 +170,9 @@ for i in bacDive.index:
         
 bacDive = bacDive.drop(list_of_Indexes)
 
+
+
+
 #################################################################
 # i found a wired flaw in BacDive database : here in this code we remove the rows with the same species name 
 # the result is a dataframe with 8681 row
@@ -156,43 +181,39 @@ bacDive = bacDive.drop(list_of_Indexes)
 #################################################################
 
 
-# # STEP THREE
+"""
+ ######     ########    ########    ########              ########    ##     ##    ########     ########    ########
+##    ##       ##       ##          ##     ##                ##       ##     ##    ##     ##    ##          ##
+##             ##       ##          ##     ##                ##       ##     ##    ##     ##    ##          ##
+ ######        ##       ######      ########                 ##       #########    ########     ######      ######
+      ##       ##       ##          ##                       ##       ##     ##    ##   ##      ##          ##
+##    ##       ##       ##          ##                       ##       ##     ##    ##    ##     ##          ##
+ ######        ##       ########    ##                       ##       ##     ##    ##     ##    ########    ########
 
+(font banner 3)
+"""
+
+print('web scrapping starts.............................')
+
+# **** goal: WEB SCRAPING from BacDive, extracting taxonomic data, optimum and growth temperature, optimum and growth pH
 # WEB SCRAPING from BacDive
-
-# In[24]:
-
-
 # we want to creat URLs using the BacDive IDs
 all_IDs = bacDive['ID']
 
 
 # producing links for web scrapping
-
-# In[25]:
-
-
 def get_ID_give_URL(ID):
     url = 'https://bacdive.dsmz.de/strain/' + str(ID)
     return url
 
 
 # reading html
-
-# In[26]:
-
-
 def read_html(url):
     response = requests.get(url)
-    
     if response.status_code == 200:
         return response.text
     return None
 #CODE = 200 means the url is availible
-
-
-# In[27]:
-
 
 # my regex to extract temperature data from BacDive
 # in future i should improve this regex 
@@ -204,13 +225,12 @@ x=str('(Ref\.\:.\#\d+)\]\<\/a\>\<\/td\>\\n\<td\>\<\/td\>\\n\<td\sclass=\"border\
 my_regex_pH = re.compile(x)
 
 
-# In[28]:
-
-
 my_data_frame = pd.DataFrame()
 
 
 for ID in all_IDs:
+    #this is to avoid some errors (too much request)
+    time.sleep(0.001)
     url = get_ID_give_URL(ID)
     html_doc = read_html(url)
     
@@ -257,11 +277,20 @@ my_data_frame = my_data_frame.T
 my_data_frame = my_data_frame.rename(columns={0: 'ID',  1: 'Last LPSN update', 2: 'Domain', 3: 'Phylum', 4: 'Class', 5: 'Order', 6: 'Family', 7: 'Genus', 8: 'species', 9: 'temperature Ref 1', 10: 'temperature Ref 2', 11: 'temperature Ref 3', 12: 'temperature Ref 4', 13: 'temperature Ref 5', 14: 'temperature Ref 6', 15: 'temperature Ref 7', 16: 'pH 1', 17: 'pH 2', 18: 'pH 3', 19: 'pH 4', 20: 'pH 5', 21: 'pH 6'})
 
 
-# # STEP FOUR
+"""
+ ######     ########    ########    ########              ########     #######     ##     ##    ########
+##    ##       ##       ##          ##     ##             ##          ##     ##    ##     ##    ##     ##
+##             ##       ##          ##     ##             ##          ##     ##    ##     ##    ##     ##
+ ######        ##       ######      ########              ######      ##     ##    ##     ##    ########
+      ##       ##       ##          ##                    ##          ##     ##    ##     ##    ##   ##
+##    ##       ##       ##          ##                    ##          ##     ##    ##     ##    ##    ##
+ ######        ##       ########    ##                    ##           #######      #######     ##     ##
 
+(font banner 3)
+"""
+print('step four (cleaning the data).............................')
+# **** goal:  another cleaning step, filling the empty cells, at the end of this step we have a message to see how many species are without temperature data
 # another cleaning and filling step
-
-# In[29]:
 
 
 # fill the cells and replacing "NaN" with "#no"
@@ -280,10 +309,6 @@ my_data_frame["pH 4"].fillna("#no", inplace = True)
 my_data_frame["pH 5"].fillna("#no", inplace = True)
 my_data_frame["pH 6"].fillna("#no", inplace = True)
 
-
-# In[30]:
-
-
 #### in order to know the species with no temperature data  ####
 list_index_no_temp = []
 list_no_temp_species_ID = []
@@ -297,12 +322,18 @@ for counter in range (0,len(my_data_frame)):
 print('until now, there are', str(len(list_no_temp_species_ID)) , 'species with no temperature data and you can see the list of IDs with no temp data in this: list_no_temp_species_ID')
 
 
-# # STEP FIVE
+"""
+ ######     ########    ########    ########           ########    ####    ##     ##    ########
+##    ##       ##       ##          ##     ##          ##           ##     ##     ##    ##
+##             ##       ##          ##     ##          ##           ##     ##     ##    ##
+ ######        ##       ######      ########           ######       ##     ##     ##    ######
+      ##       ##       ##          ##                 ##           ##      ##   ##     ##
+##    ##       ##       ##          ##                 ##           ##       ## ##      ##
+ ######        ##       ########    ##                 ##          ####       ###       ########
+"""
 
-# concat all the previous dataframes and producing an output
-
-# In[31]:
-
+print('concat all the previous dataframes.............................')
+# **** goal: concat all the previous dataframes and producing an output
 
 # making to dataframes look the same , so we can use concat()
 s = pd.Series(range(len(bacDive)))
@@ -314,18 +345,24 @@ my_data_frame = my_data_frame.set_index([s])
 result = pd.concat([bacDive, my_data_frame], axis=1)
 
 ###########################################
-#result.to_csv(output_path)
+#result.to_csv(output_path_from_end_of_step5)
 
 
-# # STEP SIX
+"""
+ ######     ########    ########    ########            ######     ####    ##     ##
+##    ##       ##       ##          ##     ##          ##    ##     ##      ##   ##
+##             ##       ##          ##     ##          ##           ##       ## ##
+ ######        ##       ######      ########            ######      ##        ###
+      ##       ##       ##          ##                       ##     ##       ## ##
+##    ##       ##       ##          ##                 ##    ##     ##      ##   ##
+ ######        ##       ########    ##                  ######     ####    ##     ##
+"""
 
+print('step 6 , data mining from PubMed, using regexes to extract data from some abstracts.............................')
+# **** goal: data mining from PubMed, using regexes to extract data from some abstracts
 # in this step we want to collect some data using PubMed API
 
 # creating queries to download the species
-
-# In[32]:
-
-
 list_of_species = result['Species']
 list_of_IDs = result['ID']
 
@@ -334,10 +371,6 @@ list_of_IDs = list_of_IDs.iloc[:,1]
 
 
 # we dont need this step here
-
-# In[33]:
-
-
 # removing the repeated species  (no need)
 #new_list_of_species =[]
 #for i in list_of_species:
@@ -347,10 +380,19 @@ list_of_IDs = list_of_IDs.iloc[:,1]
 #list_of_species = new_list_of_species
 
 
+"""
+########     ########     ######      ########    ##     ##    ########     ######
+##     ##    ##          ##    ##     ##           ##   ##     ##          ##    ##
+##     ##    ##          ##           ##            ## ##      ##          ##
+########     ######      ##   ####    ######         ###       ######       ######
+##   ##      ##          ##    ##     ##            ## ##      ##                ##
+##    ##     ##          ##    ##     ##           ##   ##     ##          ##    ##
+##     ##    ########     ######      ########    ##     ##    ########     ######
+"""
+
+
+
 # # our regexes to extract pH and optimum pH (bad regex)
-
-# In[64]:
-
 
 ######################################## regexes to find pH  #############################################################
 
@@ -430,42 +472,36 @@ reggex37 = r'temperature and pH for (optimum) growth were \d+[^\d]+(\d\d?\.?\d?\
 bad_regexes = [regex1,regex2,regex3,regex4,regex5,regex6,regex7,regex8,regex9,regex10,regex11,regex12,regex13,regex14,regex15,regex16,regex17,regex18,regex19,regex20,regex21,regex22,regex23,regex24,regex25,      reggex1,reggex2,reggex3,reggex4,reggex5,reggex6,reggex7,reggex8,reggex9,reggex10,reggex11,reggex12,reggex13,reggex14,reggex15,reggex16,reggex17,reggex18,reggex19,reggex20,reggex21,reggex22,reggex23,reggex24,reggex25,reggex26,reggex27,reggex28,reggex29,reggex30,reggex31,reggex32,reggex33,reggex34,reggex35,reggex36,reggex37]
 
 
-# # more advanced kind of regex
-
-# In[65]:
-
-
+##################################### more advanced kind of regex ###############################################
 general_regex_for_pH =r'(?: from | range |)(?:(?:(optimally)|(optimum)|(optimal)|(optima)|growth|(?#next step is because we dont want and/to/or before our pH))(?: |, | at |)pH(?:s|)(?: growth|)(?: (optimal)| (optimum)| (optima)|(?: |)\(\d.*?(?:C|c).*?\) ?|(?: |)\(\d.*?degrees.*?\) ?| range| ranged| |))(?:(?:(?: for.+?|)|(?: growth|)(?:| range(?:| for growth)| values))(?:(?: was| were| is| are)(?:.{0,30}?)|)(?:| of| at| approximately| around| between| from| ranging from)| of the medium was adjusted to)(?#from here its about digits)(?:(?: |\(| \(|)(?#here is the first pH)((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))(?:(?#here is the seperators)(?: |–|\-| to | and | or | and pH | or pH | to pH |\-pH | and pH| or pH| to pH|\-pH)(?#here is the second pH)((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))|))(?#end of digits)(?#what comes after pH digits)(?:.{0,20}(optimum)(?#from here is the optimum that sometimes comes at the end of the main part, so from now the main sentence is finished)(?:(?#from here its about digits)(?:(?#here is the first pH)(?:.{0,10}?((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|)))(?:(?#here is the seperators)(?: |–|\-| to | and | or | and pH | or pH | to pH |\-pH )(?#here is the second pH)((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))|)))|)(?#end of digits)(?#what comes after pH digits)(?=(?:\)|,|;|:| |\.))(?![c|C|°|d|%]| [c|C|°|d|%]|  [c|C|°|d|%])'
 other_regexes = r'(neutral) pH|(neutral to alkaline) pH'
 
 advanced_regexes = [general_regex_for_pH, other_regexes]
 
 
-# # last resort regex for the missing data
-
-# In[66]:
-
-
+##################################### last resort regex for the missing data ###################################
 # this needs to be checked
 last_resort =r'(?:(opti).{0,40}|)pH.{0,80}?(?:(optimally)|(optimum)|(optimal)|(optima)|).{0,20}?\D((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))(?:(?#here is the seperators)(?: |–|\-| to | and | or | and pH | or pH | to pH |\-pH )(?#here is the second pH)((?:[1][01234]|[0-9])(?:\.\d|\.\d\d|))|)(?=(?:\)|,|;|:| |\.\D))(?![c|C|°|d|%]| [c|C|°|d|%]|  [c|C|°|d|%])'
 
 last_regexes = [last_resort]
-
-
 # # first regex for temperature data
-
-# In[67]:
-
-
 first_version = r'(?: |\()(\d\d|\d)(?:(?:(?:c|C|°|degrees)|.(?:c|C|°|degrees)|..(?:c|C|°|degrees))|)(?:(?: |–|\-| to | and | or | and pH | or temperature | to temperature | temperature )(\d\d|\d)|)(?:(?:c|C|°|degrees)|.(?:c|C|°|degrees)|..(?:c|C|°|degrees))(?!%|.%|..%|\d|\w)'
 first_temperature_regex = [first_version]
 
 
-# # my def
-
-# In[68]:
 
 
+"""
+########     ########    ########
+##     ##    ##          ##
+##     ##    ##          ##
+##     ##    ######      ######
+##     ##    ##          ##
+##     ##    ##          ##
+########     ########    ##        S
+"""
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # this def gets an species name and gives a string(query) which we can later use to search pubmed
 # here we want "nov" to be in our title ----> nov means
 # we want pH to be in either Title or Abstract
@@ -476,9 +512,7 @@ def make_pubmed_advance_search_query(species_name):
     return (query)
 
 
-# In[69]:
-
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # this def gets a string(query include species name) and gives an abstract using pubmed API
 
 def get_abstract_from_pubmed(query):
@@ -489,20 +523,32 @@ def get_abstract_from_pubmed(query):
     pubmed = PubMed(tool="MyTool", email="kz.kalhor@gmail.com")
 
     # Execute the query against the API
+    time.sleep(0.1)
     results = pubmed.query(query, max_results=500)
+    time.sleep(0.1)
+    
+    
+
 
     # Loop over the retrieved articles
     for article in results:
+        #this is to avoid some errors (too much request)
+        time.sleep(0.1)
+        
+
 
         # Extract and format information from the article
         article_id = article.pubmed_id
+        
         title = article.title
         if article.keywords:
             if None in article.keywords:
                 article.keywords.remove(None)
             keywords = '", "'.join(article.keywords)
         publication_date = article.publication_date
+        
         abstract = article.abstract
+    
 
 
         # # make a file for the next step
@@ -512,12 +558,8 @@ def get_abstract_from_pubmed(query):
         
         return(result_of_search)
         
-        
 
-
-# In[88]:
-
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # with this function I remove unicode characters
 # in future i had to learn a better way to remove this characters ---> finally i made it better at 30 march 2021
 # remmember that in future you can add other characters you dont want to be removed
@@ -527,9 +569,7 @@ def get_abstract_make_changes(abstract):
     return(abstract)
 
 
-# In[89]:
-
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # this def gets an Abstract and gives an important sentence which includes pH
 # this step is not neccessary but i need it because i want to check the results using this sentences
 
@@ -549,9 +589,7 @@ def find_sentence_with_pH_data(abstract):
         return (the_sentence_about_pH)
 
 
-# In[90]:
-
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # this def gets an Abstract and gives an important sentence which includes temperature
 # this step is not neccessary but i need it because i want to check the results using this sentences
 
@@ -571,9 +609,7 @@ def find_sentence_with_temerature_data(abstract):
         return (the_sentence_about_temerature)
 
 
-# In[91]:
-
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # the final def to search for whatever information we want from a string
 # the string can be either the pH sentence or the complete abstract
 # it gets the 'pH_sentence' and gives a list of what_regex_find
@@ -595,10 +631,7 @@ def get_sentence_give_pH_data(pH_sentence):
 # it gets a sentence as an imput
 # the output is a list of what regex found
 
-
-# In[92]:
-
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # the final def to search for whatever information we want from a string
 # the string can be either temerature sentence or the complete abstract
 # it gets the 'the_sentence_about_temerature' and gives a list of what_regex_find
@@ -619,13 +652,9 @@ def get_sentence_give_temperature_data(the_sentence_about_temerature):
 # this code needs a list of regexes
 # it gets a sentence as an imput
 # the output is a list of what regex found
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-
-# # assemble all the pervious codes
-
-# In[93]:
-
-
+################################## assemble all the pervious codes ################################
 #first tell me which regex do you want to use??
 
 #regexes_pH = bad_regexes
@@ -634,9 +663,6 @@ regexes_pH = advanced_regexes
 
 
 regexes_temperature = first_temperature_regex
-
-
-# In[96]:
 
 
 #make a data frame for final storage
@@ -649,7 +675,7 @@ for i in range(0,len(list_of_species)):
     species_name = list_of_species[i]
     
     
-    
+    #this is to avoid some errors (too much request)
     query = make_pubmed_advance_search_query(species_name)
     abstract = get_abstract_from_pubmed(query)
     
@@ -687,229 +713,68 @@ for i in range(0,len(list_of_species)):
     df = df.append(data_series, ignore_index=True) 
 
 #we dont need this output
-#df.to_csv(r'C:\Users\kamy\Desktop\final_df.csv')
+#df.to_csv(r'OUTPUT_NUMBER_X.csv')
 
 
-# In[97]:
+
+
 
 
 print('hi! , using PubMed API we found' , len(list_of_species)-len(list_of_species_with_no_record) , 'species with some records and we extracted the data we need , but there is still ', str(len(list_of_species_with_no_record)) , 'species without any records')
 
 
-# In[98]:
 
 
-# putting all the data together
+"""
+########  ##     ## ######## ######## #### ##    ##  ######         ###    ##       ##
+##     ## ##     ##    ##       ##     ##  ###   ## ##    ##       ## ##   ##       ##
+##     ## ##     ##    ##       ##     ##  ####  ## ##            ##   ##  ##       ##
+########  ##     ##    ##       ##     ##  ## ## ## ##   ####    ##     ## ##       ##
+##        ##     ##    ##       ##     ##  ##  #### ##    ##     ######### ##       ##
+##        ##     ##    ##       ##     ##  ##   ### ##    ##     ##     ## ##       ##
+##         #######     ##       ##    #### ##    ##  ######      ##     ## ######## ########
+
+
+######## ##     ## ########    ########     ###    ########    ###
+   ##    ##     ## ##          ##     ##   ## ##      ##      ## ##
+   ##    ##     ## ##          ##     ##  ##   ##     ##     ##   ##
+   ##    ######### ######      ##     ## ##     ##    ##    ##     ##
+   ##    ##     ## ##          ##     ## #########    ##    #########
+   ##    ##     ## ##          ##     ## ##     ##    ##    ##     ##
+   ##    ##     ## ########    ########  ##     ##    ##    ##     ##
+
+
+
+
+########  #######   ######   ######## ######## ##     ## ######## ########
+   ##    ##     ## ##    ##  ##          ##    ##     ## ##       ##     ##
+   ##    ##     ## ##        ##          ##    ##     ## ##       ##     ##
+   ##    ##     ## ##   #### ######      ##    ######### ######   ########
+   ##    ##     ## ##    ##  ##          ##    ##     ## ##       ##   ##
+   ##    ##     ## ##    ##  ##          ##    ##     ## ##       ##    ##
+   ##     #######   ######   ########    ##    ##     ## ######## ##     ##
+"""
+
+print('putting all data togrther.................')
 all_data_together = pd.concat([result, df], axis=1)
 ######################################################
 # save the output
 all_data_together.to_csv(output_path)
 
 
-# In[ ]:
+print('conguratulations kamy first six steps are done :) :)  :) .................')
 
 
 
 
 
-# In[ ]:
 
+######################
+#  estimating time   #
+end = time.time()    #
+#                    #
+######################
 
-
-
-
-# # STEP SEVEN
-
-# what are the availible seq data according to BacDive????
-
-# In[57]:
-
-
-all_data_together = pd.read_csv(r'C:\Users\kamy\Desktop\OUTPUT.csv')
-
-
-# In[58]:
-
-
-#making some links to extract all availible data from BacDive
-
-link_part_one = r'https://bacdive.dsmz.de/strain/'
-links_list = []
-for i in all_data_together['ID']:
-    link = link_part_one + str(i)
-    links_list.append(link)
-
-
-# In[59]:
-
-
-# extracting from BacDive
-
-all_urls = links_list
-
-def read_html(url):
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        return response.text
-    return None
-    #CODE = 200 means the url is availible
-
-
-
-my_data_frame = pd.DataFrame()
-COUNTER = 0
-for url in all_urls:
-    COUNTER = COUNTER +1
-    html_doc = read_html(url)
-    if html_doc is None:
-        print("Something went wrong!!!  the following url seems to be wrong   ; " , url)
-    soup = BeautifulSoup(html_doc, "lxml")
-
-
-    listm = [url]
-
-    #first step ==> extracting seq data
-    tag = "valigntop border padding"
-    data = soup.find_all("td", class_= tag)
-    for td in data:
-        listm.append(td.text)
-    # some of the lists contains more than 20 availible seq
-    ########################### THIS IS MY HYPER-PARAMETER ##############################
-    maximum_lenght_list = 300
-    while len(listm) < maximum_lenght_list:
-        listm.append('')
-
-
-    my_data_frame[COUNTER] = pd.Series(listm)
-    
-
-my_data_frame = my_data_frame.T
-
-#my_data_frame.to_csv(r"C:\Users\kamy\Desktop\all_availible_seq_not_clean.csv")
-
-
-# cleaning the data
-
-# In[60]:
-
-
-# this code seperates the sequence colums
-
-null = ''
-df = pd.DataFrame()
-
-
-for i in range(0,len(my_data_frame)):
-    this_row = []
-    for j in range (0, maximum_lenght_list):
-        
-        if "tax ID" not in str(my_data_frame.iloc[i][j]):
-            this_row.append(my_data_frame.iloc[i][j])
-            
-        if "tax ID" in str(my_data_frame.iloc[i][j]):
-            while len(this_row)%7 != 0:
-                this_row.append(null)
-            this_row.append(my_data_frame.iloc[i][j])
-
-        
-        
-########################### THIS IS MY HYPER-PARAMETER ##############################
-    maximum_lenght_this_row = 400
-    while len(this_row) != maximum_lenght_this_row:
-        this_row.append(null)
-     
-    df[i] = pd.Series(this_row)
-            
-df = df.T
-
-
-# this code relocate the tax data
-for i in range(0,len(df)):
-    for j in range (0,maximum_lenght_this_row):
-        if 'tax' in str(df.iloc[i][j]):
-            df.iloc[i][j-2] = df.iloc[i][j]
-            df.iloc[i][j] = ''
-                    
-                    
-#df.to_csv(r"C:\Users\kamy\Desktop\all_availible_seq_clean.csv")       
-
-
-# # STEP EIGHT
-
-# In[61]:
-
-
-list_of_accession_numbers = []
-for counter in range (2,300,7):
-    column_of_accessions_in_df = df[counter]
-
-    for accession_number in column_of_accessions_in_df:
-        if accession_number != '':
-            list_of_accession_numbers.append(accession_number)
-    
-
-
-# In[62]:
-
-
-len(list_of_accession_numbers)
-
-
-# In[63]:
-
-
-list_of_accession_numbers
-
-
-# now its time to extract the subsequent sequence data using their accession numbers
-
-# In[64]:
-
-
-erorrs = []
-list_id = []
-list_seq =[]
-list_description =[]
-for i in list_of_accession_numbers:
-    try:
-        handle = Entrez.efetch(db = "nucleotide", id = i, rettype = "fasta")
-        record = SeqIO.read( handle, "fasta" )
-        list_id.append(record.id)
-        list_description.append(record.description)
-        list_seq.append(record.seq)
-        
-    except:
-        erorrs.append(i)
-        
-list_of_tuples = list(zip(list_description, list_seq))
-df_seq = pd.DataFrame(list_of_tuples,columns = ["description",'sequence'])
-df_seq.to_csv(r"C:\Users\kamy\Desktop\16S_seq.csv")
-
-
-# In[65]:
-
-
-df_seq["description"]
-
-
-# In[66]:
-
-
-for row in range(0,len(df)):
-    for counter in range (2,300,7):
-        cell_of_accessions_in_df = df.iloc[row][counter]
-        for second_counter in range (0,len(df_seq)):
-            if cell_of_accessions_in_df in df_seq["description"][second_counter]:
-                df.iloc[row][counter+4] = df_seq["description"][second_counter]
-                df.iloc[row][counter+5] = df_seq["sequence"][second_counter]
-
-                
-df.to_csv(r"C:\Users\kamy\Desktop\all_seq.csv")
-
-
-# In[ ]:
-
-
-
-
+print("estimated time to run the code is  ", end - start)
+# note:estimated time to run the code in my personal computer is   235.19173073768616
+# estimated time to run the code in Marie server is   108.68656206130981
