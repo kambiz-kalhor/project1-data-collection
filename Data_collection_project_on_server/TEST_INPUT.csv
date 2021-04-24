@@ -1,0 +1,201 @@
+ID,Species,Culture collection number,Isolation source,Country,Continent,Category 1,Category 2,Category 3
+132558,Abyssicoccus albus,"DSM 29158, CCTCC AB 2014213",deep sea sediment,Indian Ocean,Asia,#Environmental,#Aquatic,#Marine
+132558,,,,,,#Environmental,#Aquatic,#Sediment
+132478,Abyssivirga alkaniphila,"DSM 29592, JCM 30920","methane-producing, hydro- carbon-degrading microbial consortium enriched from a black smoker at the Loki's Castle vent field, Arctic Mid-Ocean Ridge",Arctic Ocean,Europe,#Environmental,#Aquatic,#Hydrothermal vent
+132478,,,,,,#Environmental,#Biofilm,
+2838,Acetivibrio alkalicellulosi,"DSM 17461, VKM B-2349",deposits of soda lake,Russia,Asia,#Engineered,#Waste,#Solid waste
+2838,,,,,,#Environmental,#Aquatic,#Lake (large)
+2838,,,,,,#Condition,#Alkaline,
+2853,Acetivibrio clariflavus,"DSM 19732, NBRC 101661, EBR 45",methanogenic sludge of a cellulose-degrading bioreactor,Japan,Asia,#Engineered,#Biodegradation,
+2853,,,,,,#Engineered,#Bioreactor,
+2853,,,,,,#Environmental,#Aquatic,#Mud (Sludge)
+2853,,,,,,#Condition,#Anoxic (anaerobic),
+2827,Acetivibrio straminisolvens,"DSM 16021, IAM 15070",a bacterial community constructed from composting processes,Japan,Asia,#Engineered,#Biodegradation,#Composting
+2827,,,,,,#Environmental,#Microbial community,
+22965,Acetivibrio thermocellus,DSM 25991,hot spring soil sample,USA,North America,#Environmental,#Aquatic,#Thermal spring
+22965,,,,,,#Environmental,#Terrestrial,#Soil
+22965,,,,,,#Condition,#Thermophilic (>45°C),
+131392,Acetoanaerobium pronyense,"DSM 27512, JCM 19400","carbonaceous chimney of an alkaline hydrothermal field, 16.5 m below sea level",France,Europe,#Environmental,#Aquatic,#Hydrothermal vent
+131392,,,,,,#Environmental,#Aquatic,#Thermal spring
+131392,,,,,,#Condition,#Alkaline,
+131392,,,,,,#Condition,#Thermophilic (>45°C),
+2717,Acetoanaerobium sticklandii,"DSM 519, ATCC 12662, CCUG 9281, JCM 1433, NCIMB 10654",black mud,USA,North America,#Environmental,#Terrestrial,#Mud (Sludge)
+2,Acetobacter aceti,"DSM 3508, ATCC 15973, NCIB 8621, CCUG 18122, LMG 1261-t1, LMG 1261 1, CCTM 3043",Beech-wood shavings of vinegar plant,,,#Engineered,#Food production,
+2,,,,,,#Environmental,#Microbial community,
+9,Acetobacter lovaniensis,"DSM 4491, ATCC 12875, CCUG 18127, IMET 10734, JCM 17121, LMD 31.2, LMG 1579, LMG 1617, NCIMB 8620",soil,Belgium,Europe,#Environmental,#Terrestrial,#Soil
+19,Acetobacter oeni,"DSM 23926, CECT 5830, LMG 21952",spoiled red wine,Portugal,Europe,#Engineered,#Food production,#Fermented
+19,,,,,,#Environmental,#Microbial community,
+19,,,,,,#Engineered,#Food production,#Beverage
+5409,Acetobacterium bakii,DSM 8239,"anaerobic sediment, paper mill waste water polluted pond",Russia,Europe,#Engineered,#Waste,#Industrial wastewater
+5409,,,,,,#Environmental,#Aquatic,#Pond (small)
+5409,,,,,,#Environmental,#Aquatic,#Sediment
+5409,,,,,,#Condition,#Anoxic (anaerobic),
+5399,Acetobacterium carbinolicum,"DSM 2925, WoProp 1",freshwater mud,Germany,Europe,#Environmental,#Aquatic,#Freshwater
+5399,,,,,,#Environmental,#Terrestrial,#Mud (Sludge)
+24007,Acetobacterium carbinolicum,"DSM 16427, ATCC BAA 990",anoxic black sediment from the brackish part of a estuary,Denmark,Europe,#Environmental,#Aquatic,#Brackish
+24007,,,,,,#Environmental,#Aquatic,#Estuary
+24007,,,,,,#Environmental,#Aquatic,#Sediment
+24007,,,,,,#Condition,#Anoxic (anaerobic),
+5400,Acetobacterium malicum,DSM 4132,ditch sediment,Germany,Europe,#Environmental,#Terrestrial,#Sediment
+5407,Acetobacterium paludosum,DSM 8237,bog sediment,Russia,Europe,#Environmental,#Aquatic,#Wetland (Swamp)
+5407,,,,,,#Environmental,#Terrestrial,#Sediment
+5403,Acetobacterium sp.,DSM 2396,mud,Italy,Europe,#Environmental,#Terrestrial,#Mud (Sludge)
+5411,Acetobacterium tundrae,DSM 9173,tundra wetland soil,Russia,Europe,#Environmental,#Terrestrial,#Soil
+5411,,,,,,#Environmental,#Terrestrial,#Tundra
+5411,,,,,,#Environmental,#Terrestrial,#Wetland (Swamp)
+5402,Acetobacterium woodii,"DSM 1030, ATCC 29683, JCM 2381, WB 1",mud,USA,North America,#Environmental,#Terrestrial,#Mud (Sludge)
+131580,Acetobacteroides hydrogenigenes,"DSM 24657, CGMCC 1.5173, JCM 17603",reed swamp,China,Asia,#Environmental,#Aquatic,#Wetland (Swamp)
+131580,,,,,,#Host,#Plants,"#Herbaceous plants (Grass,Crops)"
+5978,Acetohalobium arabaticum,"DSM 5501, ATCC 49924",lagoons,Russia,Europe,#Environmental,#Aquatic,
+17777,Acetomicrobium mobile,"DSM 13181, ATCC BAA 54, JCM 12221",The sludge of an anaerobic lagoon treating wool-scouring wastewater,Uruguay,Middle and South America,#Engineered,#Waste,#Industrial wastewater
+17777,,,,,,#Condition,#Anoxic (anaerobic),
+17777,,,,,,#Engineered,#Waste,#Wastewater
+17777,,,,,,#Environmental,#Aquatic,
+156535,Achromobacter anxifer,"CCUG 62445, LMG 26858",Sludge,Belgium,Europe,#Environmental,#Aquatic,#Mud (Sludge)
+317,Achromobacter denitrificans,DSM 11850,soil,Austria,Europe,#Environmental,#Terrestrial,#Soil
+318,Achromobacter denitrificans,"DSM 30026, ATCC 15173, NCTC 8582, CCUG 407, LMG 1231, CIP 77.15, JCM 5490, LMG 3510, CECT 449",soil,,,#Environmental,#Terrestrial,#Soil
+141589,Achromobacter denitrificans,"CCUG 3353, IAM 12556",Soil or water using Ls-alloisocitrate,,,#Environmental,#Terrestrial,#Soil
+140507,Achromobacter kerstersii,"CCUG 62449, LMG 3441",soil,,,#Environmental,#Terrestrial,#Soil
+140854,Achromobacter marplatensis,"CCUG 56371, CCM 7608, CECT 7342, LMG 26219",Soil contaminated with pentachlorophenol,Argentina,Middle and South America,#Environmental,#Terrestrial,#Soil
+321,Achromobacter piechaudii,DSM 11386,soil,Germany,Europe,#Environmental,#Terrestrial,#Soil
+309,Achromobacter ruhlandii,"DSM 653, ATCC 15749, CCUG 38886, LMG 1866",soil,USA,North America,#Environmental,#Terrestrial,#Soil
+311,Achromobacter sp.,"DSM 30031, ATCC 337, CCUG 228, NCTC 3233",ropy milk,,,#Engineered,#Food production,#Dairy product
+311,,,,,,#Environmental,#Microbial community,
+312,Achromobacter sp.,DSM 30128,soil,,,#Environmental,#Terrestrial,#Soil
+315,Achromobacter sp.,DSM 22913,soil,French Polynesia,Australia and Oceania,#Environmental,#Terrestrial,#Soil
+22903,Achromobacter sp.,DSM 26587,soil contaminated with polychlorinated biphenyls,Czech Republic,Europe,#Engineered,#Contamination,
+22903,,,,,,#Environmental,#Terrestrial,#Soil
+23815,Achromobacter sp.,"DSM 28457, A595-2-1, ID 97-237, CN 15","water, oxidation pond, tailings Bozinta",Romania,Europe,#Environmental,#Aquatic,#Pond (small)
+143153,Achromobacter sp.,CCUG 17510,Soil,France,Europe,#Environmental,#Terrestrial,#Soil
+299,Achromobacter xylosoxidans,DSM 11852,soil,Austria,Europe,#Environmental,#Terrestrial,#Soil
+130853,Achromobacter xylosoxidans,DSM 29570,marine sediment,India,Asia,#Environmental,#Aquatic,#Marine
+130853,,,,,,#Environmental,#Aquatic,#Sediment
+142779,Achromobacter xylosoxidans,CCUG 14603,Water,France,Europe,#Environmental,#Aquatic,
+156471,Achromobacter xylosoxidans,"CCUG 61957, LMG 1865",Soil,Japan,Asia,#Environmental,#Terrestrial,#Soil
+17960,Acidaminobacter hydrogenoformans,"DSM 2784, Glu 65",mud,Netherlands,Europe,#Environmental,#Terrestrial,#Mud (Sludge)
+16643,Acidianus ambivalens,"DSM 3772, JCM 9191, LEI 10",solfataric mud,Iceland,Europe,#Environmental,#Terrestrial,#Mud (Sludge)
+16643,,,,,,#Environmental,#Terrestrial,#Volcanic
+16640,Acidianus brierleyi,"DSM 1651, IFO 15269, NBRC 15269",thermal spring drainage,USA,North America,#Environmental,#Aquatic,#Thermal spring
+16641,Acidianus brierleyi,DSM 6334,hot spring drainage,Italy,Europe,#Environmental,#Aquatic,#Thermal spring
+16641,,,,,,#Condition,#Thermophilic (>45°C),
+16642,Acidianus infernus,"DSM 3191, NBRC 106462","mud, solfatara crater",Italy,Europe,#Environmental,#Terrestrial,#Mud (Sludge)
+130738,Acidianus sp.,"DSM 29038, ALE 1",hot spring,Argentina,Middle and South America,#Environmental,#Aquatic,#Thermal spring
+130738,,,,,,#Environmental,#Terrestrial,#Volcanic
+130738,,,,,,#Condition,#Thermophilic (>45°C),
+131324,Acidianus sp.,"DSM 29099, JCM 30227",hot spring,Argentina,Middle and South America,#Environmental,#Aquatic,#Thermal spring
+131324,,,,,,#Condition,#Thermophilic (>45°C),
+16644,Acidianus sulfidivorans,"DSM 18786, JCM 13667",sulfur-rich acidic edge of a solfataric hot spring,Papua New Guinea,Australia and Oceania,#Environmental,#Aquatic,#Thermal spring
+16644,,,,,,#Condition,#Acidic,
+16644,,,,,,#Condition,#Sulfuric,
+16644,,,,,,#Condition,#Thermophilic (>45°C),
+132568,Acidibacter ferrireducens,"DSM 27237, NCCB 100460, MCF 85","water of pit lake in an abandoned copper mine taken 15 m below the lake surface, pH 2.8",Spain,Europe,#Engineered,#Other,#Mine
+132568,,,,,,#Environmental,#Aquatic,#Lake (large)
+132568,,,,,,#Condition,#Acidic,
+79,Acidicaldus organivorans,DSM 16953,enrichment culture inoculated with a water sample from a Frying Pan thermal spring,USA,North America,#Engineered,#Laboratory,#Lab enrichment
+79,,,,,,#Environmental,#Aquatic,#Thermal spring
+79,,,,,,#Condition,#Thermophilic (>45°C),
+133054,Acidicapsa acidiphila,"DSM 29819, NCCB 100576, MCF 10",acidic metal-mine pit lake,Spain,Europe,#Engineered,#Other,#Mine
+133054,,,,,,#Environmental,#Aquatic,#Lake (large)
+133054,,,,,,#Condition,#Acidic,
+133383,Acidicapsa acidisoli,"DSM 100508, NBRC 111227",acidic soil of a deciduous forest,Japan,Asia,#Environmental,#Terrestrial,#Forest
+133383,,,,,,#Environmental,#Terrestrial,#Soil
+142,Acidicapsa borealis,"DSM 23886, LMG 25897, VKM B-2678","Katin Mokh
+Sphagnum peat bog",Russia,Europe,#Environmental,#Terrestrial,#Wetland (Swamp)
+142,,,,,,#Host,#Plants,#Peat moss
+133053,Acidicapsa ferrireducens,"DSM 28997, NCCB 100575, MCF 9",acidic metal-mine pit lake,Spain,Europe,#Engineered,#Other,#Mine
+133053,,,,,,#Environmental,#Aquatic,#Lake (large)
+133053,,,,,,#Condition,#Acidic,
+158294,Acidiferrobacter sp.,DSM 27195,surface exposed pyrite vein,Spain,Europe,#Environmental,#Terrestrial,#Geologic
+4303,Acidiferrobacter thiooxydans,"DSM 2392, JCM 17358",coal strip mine refuse,USA,North America,#Engineered,#Other,#Mine
+4303,,,,,,#Engineered,#Waste,#Solid waste
+4303,,,,,,#Environmental,#Terrestrial,#Geologic
+6149,Acidihalobacter aeolianus,DSM 14174,"acidic, salty water",Italy,Europe,#Environmental,#Aquatic,
+6149,,,,,,#Condition,#Acidic,
+6149,,,,,,#Condition,#Saline,
+24820,Acidihalobacter ferrooxydans,DSM 14175,"acidic, salty water",Italy,Europe,#Environmental,#Aquatic,
+24820,,,,,,#Condition,#Acidic,
+24820,,,,,,#Condition,#Saline,
+6148,Acidihalobacter prosperus,"DSM 5130, JCM 30709",geothermally heated sea sediment,Italy,Europe,#Environmental,#Aquatic,#Marine
+6148,,,,,,#Environmental,#Aquatic,#Sediment
+17799,Acidilobus aceticus,"DSM 11585, ATCC BAA 268, JCM 11320",acidic hot spring,Russia,Asia,#Environmental,#Aquatic,#Thermal spring
+17799,,,,,,#Condition,#Acidic,
+17799,,,,,,#Condition,#Thermophilic (>45°C),
+17800,Acidilobus saccharovorans,"DSM 16705, JCM 18335, VKM B-2471",mixture of water and mud from an acidic terrestrial hot pool,Russia,Asia,#Environmental,#Aquatic,
+17800,,,,,,#Environmental,#Aquatic,#Mud (Sludge)
+17800,,,,,,#Condition,#Acidic,
+17800,,,,,,#Condition,#Thermophilic (>45°C),
+106,Acidimicrobium ferrooxidans,"DSM 10331, NBRC 103882","warm,acidic,iron-,sulphur-or mineral-sulphide-rich environments",Iceland,Europe,#Condition,#Thermophilic (>45°C),
+106,,,,,,#Environmental,#Aquatic,#Thermal spring
+106,,,,,,#Condition,#Acidic,
+106,,,,,,#Condition,#Sulfuric,
+26,Acidiphilium cryptum,"DSM 2389, ATCC 33463",coal mine water,USA,North America,#Engineered,#Other,#Mine
+26,,,,,,#Environmental,#Aquatic,
+26,,,,,,#Environmental,#Terrestrial,#Geologic
+27,Acidiphilium cryptum,DSM 2390,copper mine effluent,USA,North America,#Engineered,#Other,#Mine
+27,,,,,,#Engineered,#Waste,#Wastewater
+27,,,,,,#Environmental,#Terrestrial,#Geologic
+28,Acidiphilium cryptum,DSM 2613,acid mine water,Japan,Asia,#Engineered,#Other,#Mine
+28,,,,,,#Environmental,#Aquatic,
+28,,,,,,#Condition,#Acidic,
+31,Acidiphilium multivorum,"DSM 11245, JCM 8867",acid mine water,Japan,Asia,#Engineered,#Other,#Mine
+31,,,,,,#Environmental,#Aquatic,
+31,,,,,,#Condition,#Acidic,
+131572,Acidiphilium sp.,DSM 24941,"naturally acidic, metal-rich river",Spain,Europe,#Environmental,#Aquatic,#River (Creek)
+131572,,,,,,#Condition,#Acidic,
+132354,Acidipila dinghuensis,"DSM 103429, CGMCC 1.13007, KCTC 42631",An acidic soil sample collected from the forest of Dinghushan Biosphere Reserve,China,Asia,#Condition,#Acidic,
+132354,,,,,,#Environmental,#Terrestrial,#Forest
+132354,,,,,,#Environmental,#Terrestrial,#Soil
+132249,Acidipila rosea,"DSM 103428, KCTC 23427, NBRC 107607",acid mine drainage,Japan,Asia,#Engineered,#Other,#Mine
+132249,,,,,,#Environmental,#Aquatic,
+132249,,,,,,#Condition,#Acidic,
+5459,Acidiplasma aeolicum,"DSM 18409, JCM 14615",hydrothermal pool (sand/gravel),Italy,Europe,#Environmental,#Aquatic,
+5459,,,,,,#Environmental,#Terrestrial,
+5459,,,,,,#Condition,#Thermophilic (>45°C),
+5460,Acidiplasma cupricumulans,"DSM 16651, JCM 13668","mineral sulfide ore, Monywa Minesite",Myanmar,Asia,#Environmental,#Terrestrial,
+5460,,,,,,#Condition,#Sulfuric,
+130545,Acidipropionibacterium damnosum,"DSM 25450, CECT 8062",spoiled packaged Spanish-style green olives,Spain,Europe,#Engineered,#Food production,"#Bottled, canned, packed food"
+130545,,,,,,#Environmental,#Microbial community,
+130545,,,,,,#Host Body-Site,#Plant,#Fruit (Seed)
+130544,Acidipropionibacterium olivae,"DSM 25436, CECT 8061, KCTC 15514",spoiled packaged Spanish-style green olives,Spain,Europe,#Engineered,#Food production,"#Bottled, canned, packed food"
+130544,,,,,,#Environmental,#Microbial community,
+130544,,,,,,#Host Body-Site,#Plant,#Fruit (Seed)
+81,Acidisoma tundrae,"DSM 19999, VKM B-2488",acidic oligotrophic <i>Sphagnum</i>-dominated wetland,Russia,Asia,#Host,#Plants,#Peat moss
+81,,,,,,#Condition,#Acidic,
+81,,,,,,#Environmental,#Aquatic,#Wetland (Swamp)
+67,Acidisphaera rubrifaciens,"DSM 16009, JCM 10600",surface water and sediment from an acidic hot spring,Japan,Asia,#Environmental,#Aquatic,#Sediment
+67,,,,,,#Environmental,#Aquatic,#Surface water
+67,,,,,,#Environmental,#Aquatic,#Thermal spring
+67,,,,,,#Condition,#Acidic,
+17890,Aciditerrimonas ferrireducens,"DSM 45281, JCM 15389",solfataric soil,Japan,Asia,#Environmental,#Terrestrial,#Soil
+17890,,,,,,#Environmental,#Terrestrial,#Volcanic
+128,Acidithiobacillus albertensis,"DSM 14366, ATCC 35403",acidic soil at sulfur stockpile,Canada,North America,#Environmental,#Terrestrial,#Soil
+128,,,,,,#Condition,#Acidic,
+128,,,,,,#Condition,#Sulfuric,
+130138,Acidithiobacillus ferridurans,"DSM 29468, ATCC 33020, JCM 18981","ore, uranium mine",Japan,Asia,#Engineered,#Other,#Mine
+130138,,,,,,#Environmental,#Terrestrial,#Geologic
+132357,Acidithiobacillus ferriphilus,"DSM 100412, JCM 30830",An acidic pool in a geothermal area of Montserrat,Montserrat (British Overseas Territory),Middle and South America,#Condition,#Acidic,
+132357,,,,,,#Environmental,#Aquatic,
+119,Acidithiobacillus ferrivorans,DSM 17398,sediment sample,Russia,Asia,#Environmental,#Terrestrial,#Sediment
+129,Acidithiobacillus ferrivorans,"DSM 22755, JCM 15606",acid mine drainage,Norway,Europe,#Engineered,#Other,#Mine
+129,,,,,,#Environmental,#Aquatic,
+129,,,,,,#Condition,#Acidic,
+114,Acidithiobacillus ferrooxidans,DSM 1927,mine water,Austria,Europe,#Engineered,#Other,#Mine
+114,,,,,,#Environmental,#Aquatic,
+115,Acidithiobacillus ferrooxidans,DSM 9464,chalcocite overburden pond,Australia,Australia and Oceania,#Environmental,#Aquatic,#Pond (small)
+115,,,,,,#Environmental,#Terrestrial,#Geologic
+116,Acidithiobacillus ferrooxidans,DSM 9465,mine shaff water sample,Australia,Australia and Oceania,#Engineered,#Other,#Mine
+116,,,,,,#Environmental,#Aquatic,
+117,Acidithiobacillus ferrooxidans,DSM 11477,mine drainage water,Peru,Middle and South America,#Engineered,#Other,#Mine
+117,,,,,,#Environmental,#Aquatic,
+120,Acidithiobacillus ferrooxidans,DSM 24419,Solfatara,Italy,Europe,#Environmental,#Terrestrial,#Volcanic
+130137,Acidithiobacillus ferrooxidans,DSM 29444,"rock samples, Ilba mine",Romania,Europe,#Engineered,#Other,#Mine
+130137,,,,,,#Environmental,#Terrestrial,#Geologic
+122,Acidithiobacillus thiooxidans,DSM 622,pond water,Germany,Europe,#Environmental,#Aquatic,#Pond (small)
+124,Acidithiobacillus thiooxidans,DSM 11478,mine drainage water,Brazil,Middle and South America,#Engineered,#Other,#Mine
+124,,,,,,#Environmental,#Aquatic,
+125,Acidithiobacillus thiooxidans,"DSM 14887, ATCC 19377, JCM 3867, NCIMB 8343",Kimmeridge clay,United Kingdom,Europe,#Environmental,#Terrestrial,#Geologic
+132685,Acidithiobacillus thiooxidans,DSM 103717,salt flat brine,Chile,Middle and South America,#Environmental,#Terrestrial,#Desert
+132685,,,,,,#Condition,#Saline,
+132012,Acidobacteriaceae sp.,"DSM 24295, KBS 83",soil,USA,North America,#Environmental,#Terrestrial,#Soil
+132013,Acidobacteriaceae sp.,"DSM 24297, KBS 96",soil,USA,North America,#Environmental,#Terrestrial,#Soil
+133033,Acidobacterium ailaaui,"DSM 27394, LMG 28340",geothermally heated microbial mat,USA,North America,#Environmental,#Microbial community,#Microbial mat

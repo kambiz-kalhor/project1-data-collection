@@ -55,8 +55,8 @@ future goals :
 For every organism possible
 
 Add 16S sequence from the strain in BacDive -----> mostly done
-[] Add genome from the strain in BacDive
-[] Add 16S and/or genome sequence from other sources (e.g. RefSeq, IMG/M, SRA, ENA) for precisely the same organism
+Add genome from the strain in BacDive -----> mostly done
+Add 16S and/or genome sequence from other sources (e.g. RefSeq, IMG/M, SRA, ENA) for precisely the same organism -----> mostly done
 [] Add genome sequence for different organisms having the identical 16S sequence to organisms in BacDive
 
 
